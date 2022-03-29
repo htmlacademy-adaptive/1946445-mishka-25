@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Кристина Медведева](https://up.htmlacademy.ru/adaptive/25/user/1946445).
-* Наставник: []Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
 
 ---
 

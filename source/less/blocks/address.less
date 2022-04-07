@@ -1,0 +1,29 @@
+.address__item {
+  display: grid;
+  grid-template-columns: 15% auto;
+  padding-bottom: 40px;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.address__name {
+  grid-column: 1;
+}
+
+.address__description {
+  grid-column: 2;
+}
+
+.address__description--info {
+  position: relative;
+}
+
+.address__description--info::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 167px;
+  border-bottom: 1px solid #62d1ba;
+  left: 0;
+  top: 25px;
+}

@@ -1,17 +1,3 @@
-@font-face {
-  font-family: "opensans";
-  font-weight: 400;
-  font-style: normal;
-  src: url("../../fonts/opensans.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "opensans";
-  font-weight: 700;
-  font-style: normal;
-  src: url("../../fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
 .page {
   box-sizing: border-box;
   font-family: "opensans", sans-serif;
@@ -27,35 +13,56 @@
   padding: 0;
   border: 0;
 }
+.input {
+  width: 260px;
+  border: none;
+  font-size: 17px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid #000000;
+}
 .main-header {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
   background-color: #ffffff;
   color: #000000;
 }
-.main-nav {
+.main-header__navigation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
   padding-top: 22px;
   padding-bottom: 22px;
-  display: flex;
 }
-.main-nav__logo {
+.main-header__logo {
   display: block;
+  width: 86px;
   margin-left: 116px;
 }
-.main-nav__toggle {
-  margin-left: 67px;
-  width: 20;
+.main-header__toggle {
+  width: 20px;
   height: 14px;
+  position: absolute;
+  left: 239px;
+  top: 32px;
 }
-.main-nav__list {
+.main-header__wrapper {
+  width: 100%;
+}
+.main-header__list {
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 }
-.main-nav__item {
-  padding: 28.5px 0 26.5px 0;
+.main-header__item {
+  padding: 28.5px 0 26.5px 46px;
   text-align: center;
 }
-.main-nav__item a {
+.main-header__item a {
   text-decoration: none;
   color: #000000;
 }
@@ -89,40 +96,40 @@
 .presentation__title--form {
   margin: 0;
 }
-.products {
+.presentation__products {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.products__list {
+.presentation__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.products__item {
+.presentation__item {
   background-color: #63d1bb;
 }
-.products__item--toys {
+.presentation__item--toys {
   background-color: #56c3b2;
 }
-.products__link {
+.presentation__link {
   display: block;
   text-decoration: none;
-  padding: 24px 160px 31px 0;
   color: #ffffff;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
+  padding: 24px 160px 31px 0;
   margin-left: 30px;
 }
-.featured {
+.featured-card {
   margin-bottom: 73px;
 }
 .featured-card__title {
   margin: 0;
   margin-left: 30px;
 }
-.featured__attention {
+.featured-card__attention {
   color: #63d1bb;
   text-transform: uppercase;
   font-weight: 700;
@@ -136,6 +143,23 @@
   line-height: 24px;
   margin-bottom: 28px;
   margin-left: 30px;
+}
+.featured-card__parameters {
+  margin-bottom: 27px;
+}
+.featured-card__item {
+  display: grid;
+  grid-template-columns: 23% auto;
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  margin-left: 30px;
+}
+.featured-card__property {
+  grid-column: 1;
+}
+.featured-card__definition {
+  grid-column: 2;
 }
 .featured-card__image {
   display: block;
@@ -151,23 +175,6 @@
 .featured-card__button {
   margin-left: 30px;
 }
-.parameters {
-  margin-bottom: 27px;
-}
-.parameters__item {
-  display: grid;
-  grid-template-columns: 23% auto;
-  border-bottom: 1px solid #ececec;
-  padding-bottom: 10px;
-  padding-top: 5px;
-  margin-left: 30px;
-}
-.parameters__name {
-  grid-column: 1;
-}
-.parameters__description {
-  grid-column: 2;
-}
 .button {
   display: block;
   font-weight: 700;
@@ -181,6 +188,9 @@
   border: 2px solid #444444;
   text-transform: uppercase;
   background-color: #ffffff;
+}
+.button--small {
+  width: 192px;
 }
 .title {
   font-weight: 700;
@@ -215,10 +225,10 @@
 }
 .reviews__list {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   font-size: 15px;
   line-height: 30px;
+  margin: 0;
+  padding: 0;
   margin-left: 30px;
 }
 .reviews__quote {
@@ -248,9 +258,9 @@
   display: block;
   width: 130px;
   height: 52px;
-  padding: 13px 42px;
-  border: none;
+  border: 1px solid #ececec;
   background-color: #ffffff;
+  padding: 13px 42px;
 }
 .slider__button {
   margin-left: 30px;
@@ -266,29 +276,23 @@
   margin-bottom: 30px;
   margin-left: 30px;
 }
-.contacts__map {
-  margin-bottom: 42px;
-}
-.contacts__button {
-  margin-left: 30px;
-}
-.address__item {
+.contacts__item {
   display: grid;
   grid-template-columns: 15% auto;
-  padding-bottom: 40px;
   font-size: 14px;
   line-height: 30px;
+  padding-bottom: 40px;
 }
-.address__name {
+.contacts__name {
   grid-column: 1;
 }
-.address__description {
+.contacts__description {
   grid-column: 2;
 }
-.address__description--info {
+.contacts__description--info {
   position: relative;
 }
-.address__description--info::after {
+.contacts__description--info::after {
   content: "";
   position: absolute;
   height: 1px;
@@ -296,6 +300,12 @@
   border-bottom: 1px solid #62d1ba;
   left: 0;
   top: 25px;
+}
+.contacts__map {
+  margin-bottom: 42px;
+}
+.contacts__button {
+  margin-left: 30px;
 }
 .main-footer {
   background-color: #f1f1f1;
@@ -310,22 +320,14 @@
   margin-bottom: 60px;
   padding: 0;
 }
-.social__item {
+.main-footer__item {
   margin-right: 29px;
 }
-.copyright__text {
-  display: block;
-  margin: 0;
-  padding: 0;
-  font-size: 19px;
-  line-height: 18px;
-  font-weight: 700;
-}
-.copyright {
+.main-footer__copyright {
   display: flex;
   position: relative;
 }
-.copyright::before {
+.main-footer__copyright::before {
   content: "";
   position: absolute;
   height: 1px;
@@ -334,7 +336,15 @@
   bottom: 60px;
   left: -17px;
 }
-.copyright__link {
+.main-footer__copyright-text {
+  display: block;
+  padding: 0;
+  font-size: 19px;
+  line-height: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+.main-footer__copyright-link {
   display: block;
   margin-left: 27px;
   margin-top: -8px;
@@ -405,37 +415,53 @@
 }
 .manufacture__title {
   display: block;
-  margin-left: 91px;
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
+  margin-left: 91px;
   margin-bottom: 26.5px;
 }
 .manufacture__video {
   margin-bottom: 35px;
+  margin-left: 30px;
 }
 .manufacture__text {
   font-size: 13px;
   line-height: 24px;
-  margin-left: 34px;
+  margin-left: 64px;
   margin-bottom: 41px;
 }
 .manufacture__button {
   margin-bottom: 51px;
-  margin-left: 30px;
+  margin-left: 64px;
 }
-.form__text {
+.button--thin {
+  max-width: 170px;
+}
+.order__text {
   font-size: 13px;
   line-height: 24px;
   margin-left: 30px;
   margin-bottom: 29px;
 }
-.form__field {
-  border: none;
+.order__field {
   padding: 0;
   margin-left: 30px;
 }
-.form-title {
+.order__tip {
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+.order__button {
+  margin-left: 30px;
+  margin-bottom: 55px;
+}
+.field {
+  border: none;
+}
+.field__name {
   text-transform: uppercase;
   color: #63d1bb;
   font-size: 17px;
@@ -444,7 +470,7 @@
   position: relative;
   margin-bottom: 25px;
 }
-.form-title:not(:nth-child(n+3))::after {
+.field__name:not(:nth-child(n+3))::after {
   content: "";
   position: absolute;
   width: 200px;
@@ -453,7 +479,7 @@
   left: 60px;
   top: 8px;
 }
-.form-title--email::after {
+.field__name--email::after {
   content: "";
   position: absolute;
   width: 182px;
@@ -462,34 +488,17 @@
   left: 80px;
   top: 8px;
 }
-.form-title--add {
+.field__name--add {
   display: block;
   margin-bottom: 23px;
 }
-.form__tip {
-  font-size: 14px;
-  line-height: 16px;
-  margin-left: 30px;
-  margin-bottom: 30px;
-}
-.form__button {
-  margin-left: 30px;
-  margin-bottom: 55px;
-}
 .field__list {
-  list-style-type: none;
   display: flex;
   flex-direction: column;
+  list-style-type: none;
 }
 .field__item {
   margin-bottom: 24px;
-}
-.control__label {
-  display: block;
-  font-size: 17px;
-  line-height: 18px;
-  font-weight: 700;
-  margin-left: 20px;
 }
 .field__label {
   font-size: 17px;
@@ -497,13 +506,7 @@
   font-weight: 700;
 }
 .field__input {
-  width: 260px;
-  border: none;
-  font-size: 17px;
-  line-height: 18px;
-  color: rgba(0, 0, 0, 0.3);
   padding: 17px 8px 17px 0;
-  border-bottom: 2px solid #000000;
   margin-bottom: 22px;
 }
 .field__input--desired {
@@ -513,5 +516,26 @@
   resize: none;
   font-family: "opensans", sans-serif;
   margin-bottom: 17px;
+}
+.control__label {
+  display: block;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+@font-face {
+  font-family: "opensans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../../fonts/opensans.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "opensans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../../fonts/opensansbold.woff2") format("woff2");
+  font-display: swap;
 }
 /*# sourceMappingURL=style.css.map */

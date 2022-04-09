@@ -1,0 +1,68 @@
+.field {
+  border: none;
+}
+
+.field__name {
+  text-transform: uppercase;
+  color: #63d1bb;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.field__name:not(:nth-child(n+3))::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 1px;
+  border-bottom: 1px solid #62d1ba;
+  left: 60px;
+  top: 8px;
+}
+
+.field__name--email::after {
+  content: "";
+  position: absolute;
+  width: 182px;
+  height: 1px;
+  border-bottom: 1px solid #62d1ba;
+  left: 80px;
+  top: 8px;
+}
+
+.field__name--add {
+  display: block;
+  margin-bottom: 23px;
+}
+
+.field__list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.field__item {
+  margin-bottom: 24px;
+}
+
+.field__label {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.field__input {
+  padding: 17px 8px 17px 0;
+  margin-bottom: 22px;
+}
+
+.field__input--desired {
+  border: 2px solid #000000;
+  width: 230px;
+  padding: 17px;
+  resize: none;
+  font-family: "opensans", sans-serif;
+  margin-bottom: 17px;
+}

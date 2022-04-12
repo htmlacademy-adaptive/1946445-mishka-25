@@ -4,7 +4,6 @@
 
 .about__title {
   margin-bottom: 82px;
-  margin-left: 30px;
 }
 
 .about__list {
@@ -14,9 +13,58 @@
   line-height: 20px;
   padding: 0;
   margin: 0;
-  margin-left: 30px;
 }
 
 .about__item:not(:last-child) {
   margin-bottom: 83px;
+}
+
+@media (min-width: @tablet-width) {
+  .about__list {
+    display: grid;
+    grid-template-columns: 265px 325px;
+    column-gap: 70px;
+    row-gap: 110px;
+    font-size: 20px;
+  }
+
+  .about__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .about__item--material {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .about__item--style {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .about__item--like {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .about__item--handmade {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .about__item--support {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .about__item--wrap {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about {
+    margin-left: 175px;
+  }
 }

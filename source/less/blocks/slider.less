@@ -1,7 +1,6 @@
 .slider__toggles {
   display: flex;
   margin-bottom: 38px;
-  margin-left: 30px;
 }
 
 .slider__toggle {
@@ -13,6 +12,42 @@
   padding: 13px 42px;
 }
 
-.slider__button {
-  margin-left: 30px;
+@media (min-width: @tablet-width) {
+  .slider {
+    position: relative;
+  }
+
+  .slider__button {
+    position: absolute;
+    width: 175px;
+    left: 487px;
+    top: 0;
+  }
+
+  .slider__toggles {
+    position: absolute;
+    left: 497px;
+    bottom: 15px;
+    gap: 37px;
+    margin: 0;
+  }
+
+  .slider__toggle {
+    width: 50px;
+    height: 26px;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider__button {
+    left: 687px;
+    top: 0;
+  }
+
+  .slider__toggles {
+    left: 720px;
+    bottom: 15px;
+    margin: 0;
+  }
 }

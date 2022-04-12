@@ -1,6 +1,6 @@
 .main-header {
-  display: flex;
-  flex-wrap: wrap;
+  width: 260px;
+  padding: 0 30px;
   position: relative;
   background-color: #ffffff;
   color: #000000;
@@ -20,7 +20,7 @@
 .main-header__logo {
   display: block;
   width: 86px;
-  margin-left: 116px;
+  margin-left: 86px;
 }
 
 .main-header__toggle {
@@ -31,11 +31,9 @@
   top: 32px;
 }
 
-.main-header__wrapper {
-  width: 100%;
-}
-
 .main-header__list {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -48,5 +46,99 @@
   a {
     text-decoration: none;
     color: #000000;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-header {
+    width: 668px;
+    padding: 0 50px;
+    position: relative;
+  }
+
+  .main-header__navigation {
+    flex-direction: row;
+  }
+
+  .main-header__logo {
+    margin-left: 0;
+    width: 322px;
+  }
+
+  .main-header__toggle {
+    display: none;
+  }
+
+  .main-header__list {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 167px  167px 83px 264px;
+    grid-template-rows: 24px 24px;
+    row-gap: 52px;
+  }
+
+  .main-header__item {
+    padding: 0;
+  }
+
+  .main-header__item--search {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+
+  .main-header__item--cart {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+
+  .main-header__item--catalog {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    z-index: 1;
+  }
+
+  .main-header__item--order {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    z-index: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header {
+    width: 1050px;
+    padding: 0 50px;
+    position: relative;
+  }
+
+  .main-header__logo {
+    width: 150px;
+    margin-left: 450px;
+  }
+
+  .main-header__list {
+    grid-template-columns: 184px 265px 250px 82px 266px;
+    grid-template-rows: 24px 24px;
+    row-gap: 52px;
+  }
+
+  .main-header__item--search {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+
+  .main-header__item--cart {
+    grid-column: 5/6;
+    grid-row: 1/2;
+  }
+
+  .main-header__item--catalog {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .main-header__item--order {
+    grid-column: 2/3;
+    grid-row: 1/2;
   }
 }

@@ -9,6 +9,7 @@
 <body class="page__body">
   <header class="main-header">
     <nav class="main-header__navigation">
+      <div class="main-header__navigation-container main-header__navigation-container--mobile">
       <a class="main-header__logo" href="index.html">
         <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин товаров ручной работы «Мишка».">
       </a>
@@ -37,6 +38,65 @@
             </a>
           </li>
         </ul>
+      </div>
+      <div class="main-header__navigation-container main-header__navigation-container--tablet">
+        <a class="main-header__logo main-header__logo--tablet" href="index.html">
+          <img src="img/logo-tablet.svg" width="113" height="46" alt="Магазин товаров ручной работы «Мишка».">
+        </a>
+        <ul class="main-header__list main-header__list--tablet-main">
+          <li class="main-header__item main-header__item--tablet main-header__item--tablet-search">
+            <a class="main-header__link main-header__link--tablet main-header__link--tablet-search" href="#">
+              <span class="visually-hidden">Поиск по сайту</span>
+          </a>
+        </li>
+          <li class="main-header__item main-header__item--tablet main-header__item--tablet-cart">
+            <a class="main-header__link main-header__link--tablet main-header__link--tablet-cart" href="#">
+              Корзина: пока пуста
+            </a>
+          </li>
+        </ul>
+        <ul class="main-header__list main-header__list--tablet-secondary">
+          <li class="main-header__item main-header__item--tablet">
+            <a href="catalog.html">
+              Каталог товаров
+            </a>
+          </li>
+          <li class="main-header__item main-header__item--tablet">
+            <a href="form.html">
+              Вязание на заказ
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-header__navigation-container main-header__navigation-container--desktop">
+        <ul class="main-header__list main-header__list--desktop-secondary">
+          <li class="main-header__item main-header__item--desktop main-header__item--desktop-catalog">
+            <a class="main-header__link main-header__link--desktop main-header__link--desktop-catalog" href="catalog.html">
+              Каталог товаров
+            </a>
+          </li>
+          <li class="main-header__item main-header__item--desktop main-header__item--desktop-order">
+            <a class="main-header__link main-header__link--desktop main-header__link--desktop-order" href="form.html">
+              Вязание на заказ
+            </a>
+          </li>
+        </ul>
+        <a class="main-header__logo main-header__logo--desktop" href="index.html">
+          <img src="img/logo-desktop.svg" width="149" height="72" alt="Магазин товаров ручной работы «Мишка».">
+        </a>
+        <ul class="main-header__list main-header__list--desktop-main">
+          <li class="main-header__item main-header__item--desktop main-header__item--desktop-search">
+            <a class="main-header__link main-header__link--desktop main-header__link--desktop-search" href="#">
+              <span class="visually-hidden">Поиск по сайту</span>
+          </a>
+        </li>
+          <li class="main-header__item main-header__item--desktop main-header__item--desktop-cart">
+            <a class="main-header__link main-header__link--desktop main-header__link--desktop-cart" href="#">
+              Корзина: пока пуста
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main class="main-container">
@@ -82,7 +142,7 @@
               <dd class="featured-card__definition">15 см</dd>
             </div>
           </dl>
-          <img class="featured-card__image" src="img/knitted-basket-image.jpg" width="260" height="315" alt="Вязаная корзинка.">
+          <img class="featured-card__image" src="img/knitted-basket-mobile.jpg" alt="Вязаная корзинка.">
           <p class="featured-card__price">Цена: 990 руб.</p>
           <a class="featured-card__button button" href="#">Заказать</a>
       </div>

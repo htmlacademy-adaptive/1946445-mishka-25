@@ -1,5 +1,5 @@
 .main-header {
-  width: 260px;
+  width: 100vw;
   padding: 0 30px;
   margin: 0 auto;
   position: relative;
@@ -8,15 +8,11 @@
 }
 
 .main-header__navigation {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
   padding-top: 22px;
   padding-bottom: 22px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .main-header__navigation-container--tablet {
@@ -30,33 +26,51 @@
 .main-header__logo {
   display: block;
   width: 86px;
-  margin-left: 86px;
+  margin: 0 auto;
 }
 
 .main-header__toggle {
   width: 20px;
   height: 14px;
   position: absolute;
-  left: 239px;
+  right: 100px;
   top: 32px;
 }
 
+.main-header__list-container {
+  width: 100vw;
+  margin-left: -30px;
+  position: absolute;
+  top: 60px;
+  background-color: #ffffff;
+}
+
 .main-header__list {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
 }
 
+.main-header__list--mobile {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
 .main-header__item {
   padding: 28.5px 0 26.5px 46px;
-  text-align: center;
+}
 
-  a {
-    text-decoration: none;
-    color: #000000;
-  }
+.main-header__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.main-header__link--mobile {
+  display: block;
 }
 
 @media (min-width: @tablet-width) {
@@ -75,7 +89,7 @@
   }
 
   .main-header {
-    width: 668px;
+    width: 100vw;
     padding: 0 50px;
     position: relative;
   }
@@ -91,6 +105,7 @@
 
   .main-header__list--tablet-main {
     margin-left: auto;
+    margin-right: 100px;
   }
 
   .main-header__list--tablet-secondary {
@@ -136,7 +151,7 @@
 
 @media (min-width: @desktop-width) {
   .main-header {
-    width: 1050px;
+    width: 100vw;
     padding: 0 50px;
     position: relative;
   }
@@ -152,6 +167,7 @@
 
   .main-header__navigation-container--desktop {
     display: flex;
+    justify-content: space-between;
   }
 
   .main-header__list--desktop-main,
@@ -163,7 +179,7 @@
   }
 
   .main-header__list--desktop-main {
-    margin-left: auto;
+    margin-right: 100px;
   }
 
   .main-header__item--desktop {
@@ -213,7 +229,8 @@
   }
 
   .main-header__logo--desktop {
-    margin: 0 auto;
+    margin: 0;
+    margin-right: 150px;
     padding-top: 10px;
   }
 }

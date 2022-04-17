@@ -1,10 +1,11 @@
 .featured-card {
   margin-bottom: 73px;
+  display: flex;
+  flex-direction: column;
 }
 
 .featured-card__title {
   margin: 0;
-  margin-left: 30px;
 }
 
 .featured-card__attention {
@@ -14,14 +15,12 @@
   font-size: 17px;
   line-height: 20px;
   margin-bottom: 17.5px;
-  margin-left: 30px;
 }
 
 .featured-card__text {
   font-size: 15px;
   line-height: 24px;
   margin-bottom: 28px;
-  margin-left: 30px;
 }
 
 .featured-card__parameters {
@@ -30,11 +29,10 @@
 
 .featured-card__item {
   display: grid;
-  grid-template-columns: 23% auto;
+  grid-template-columns: 97px auto;
   border-bottom: 1px solid #ececec;
   padding-bottom: 10px;
   padding-top: 5px;
-  margin-left: 30px;
 }
 
 .featured-card__property {
@@ -47,7 +45,7 @@
 
 .featured-card__image {
   display: block;
-  margin-left: 30px;
+  width: 100%;
 }
 
 .featured-card__price {
@@ -55,9 +53,101 @@
   font-size: 17px;
   line-height: 24px;
   margin-bottom: 24.5px;
-  margin-left: 82px;
+  align-self: center;
 }
 
-.featured-card__button {
-  margin-left: 30px;
+@media (min-width: @tablet-width) {
+  .featured-card {
+    max-width: 668px;
+    display: block;
+    position: relative;
+    padding-right: 218px;
+    background-image: url("../../img/knitted-basket-desktop.jpg");
+    background-size: 334px 404px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+  }
+
+  .featured-card__title {
+    margin-bottom: 37.5;
+  }
+
+  .featured-card__attention {
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .featured-card__text {
+    font-size: 17px;
+    line-height: 30px;
+    margin-right: 158px;
+    margin-bottom: 48px;
+  }
+
+  .featured-card__parameters {
+    max-width: 300px;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 70px;
+  }
+
+  .featured-card__image {
+    display: none;
+  }
+
+  .featured-card__price {
+    font-size: 20px;
+    margin-left: 67px;
+    margin-bottom: 33px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .featured-card {
+    max-width: 1050px;
+    position: relative;
+    padding: 115px 330px 96px 175px;
+    background-image: url("../../img/knitted-basket-desktop.jpg");
+    background-size: 525px 636px;
+    background-position: right 65px;
+    background-repeat: no-repeat;
+  }
+
+  .featured-card__attention {
+    width: 100px;
+    position: absolute;
+    left: 32px;
+    top: 123px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .featured-card__title {
+    width: 545px;
+    margin-bottom: 35px;
+  }
+
+  .featured-card__image {
+    position: absolute;
+    left: 675px;
+    top: 100px;
+    z-index: -1;
+  }
+
+  .featured-card__text {
+    margin-bottom: 60px;
+    padding-right: 88px;
+  }
+
+  .featured-card__parameters {
+    margin-bottom: 124px;
+  }
+
+  .featured-card__price {
+    font-size: 20px;
+  }
 }

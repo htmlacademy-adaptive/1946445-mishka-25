@@ -5,7 +5,7 @@
 
 .slider__toggle {
   display: block;
-  width: 130px;
+  flex-grow: 1;
   height: 52px;
   border: 1px solid #ececec;
   background-color: #ffffff;
@@ -20,13 +20,13 @@
   .slider__button {
     position: absolute;
     width: 175px;
-    left: 487px;
+    right: 0;
     top: 0;
   }
 
   .slider__toggles {
     position: absolute;
-    left: 497px;
+    right: 0;
     bottom: 15px;
     gap: 37px;
     margin: 0;
@@ -41,12 +41,12 @@
 
 @media (min-width: @desktop-width) {
   .slider__button {
-    left: 687px;
+    right: 0;
     top: 0;
   }
 
   .slider__toggles {
-    left: 720px;
+    right: 0;
     bottom: 15px;
     margin: 0;
   }

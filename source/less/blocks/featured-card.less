@@ -1,5 +1,7 @@
 .featured-card {
   margin-bottom: 73px;
+  display: flex;
+  flex-direction: column;
 }
 
 .featured-card__title {
@@ -27,7 +29,7 @@
 
 .featured-card__item {
   display: grid;
-  grid-template-columns: 23% auto;
+  grid-template-columns: 97px auto;
   border-bottom: 1px solid #ececec;
   padding-bottom: 10px;
   padding-top: 5px;
@@ -43,6 +45,7 @@
 
 .featured-card__image {
   display: block;
+  width: 100%;
 }
 
 .featured-card__price {
@@ -50,14 +53,17 @@
   font-size: 17px;
   line-height: 24px;
   margin-bottom: 24.5px;
-  margin-left: 52px;
+  align-self: center;
 }
 
 @media (min-width: @tablet-width) {
   .featured-card {
+    max-width: 668px;
+    display: block;
     position: relative;
     padding-right: 218px;
-    background-image: url("../../img/knitted-basket-tablet.jpg");
+    background-image: url("../../img/knitted-basket-desktop.jpg");
+    background-size: 334px 404px;
     background-position: right bottom;
     background-repeat: no-repeat;
   }
@@ -67,8 +73,9 @@
   }
 
   .featured-card__attention {
+    width: 100px;
     position: absolute;
-    left: 555px;
+    right: 0;
     top: 8px;
     line-height: 17px;
     text-align: center;
@@ -82,14 +89,10 @@
   }
 
   .featured-card__parameters {
+    max-width: 300px;
     font-size: 15px;
     line-height: 20px;
     margin-bottom: 70px;
-  }
-
-  .featured-card__item {
-    max-width: 292px;
-    grid-template-columns: 20% auto;
   }
 
   .featured-card__image {
@@ -98,16 +101,18 @@
 
   .featured-card__price {
     font-size: 20px;
-    margin-left: 57px;
+    margin-left: 67px;
     margin-bottom: 33px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .featured-card {
+    max-width: 1050px;
     position: relative;
     padding: 115px 330px 96px 175px;
     background-image: url("../../img/knitted-basket-desktop.jpg");
+    background-size: 525px 636px;
     background-position: right 65px;
     background-repeat: no-repeat;
   }
@@ -134,22 +139,15 @@
   }
 
   .featured-card__text {
-    width: 300px;
     margin-bottom: 60px;
+    padding-right: 88px;
   }
 
   .featured-card__parameters {
     margin-bottom: 124px;
   }
 
-  .featured-card__item {
-    max-width: 292px;
-    grid-template-columns: 35% auto;
-  }
-
   .featured-card__price {
-    width: 174px;
     font-size: 20px;
-    margin-left: 57px;
   }
 }

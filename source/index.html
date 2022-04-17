@@ -10,130 +10,132 @@
 
 <body class="page__body">
   <header class="main-header">
-    <nav class="main-header__navigation">
-      <div class="main-header__navigation-container main-header__navigation-container--mobile">
-        <a class="main-header__logo" href="index.html">
-          <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин товаров ручной работы «Мишка».">
-        </a>
-        <button class="main-header__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-header__list-container">
-          <ul class="main-header__list main-header__list--mobile">
-            <li class="main-header__item main-header__item--mobile main-header__item--catalog">
-              <a class="main-header__link main-header__link--mobile" href="catalog.html">
+    <div class="main-header__wrapper">
+      <nav class="main-header__navigation">
+        <div class="main-header__navigation-container main-header__navigation-container--mobile">
+          <a class="main-header__logo" href="index.html">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин товаров ручной работы «Мишка».">
+          </a>
+          <button class="main-header__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-header__list-container">
+            <ul class="main-header__list main-header__list--mobile">
+              <li class="main-header__item main-header__item--mobile main-header__item--catalog">
+                <a class="main-header__link main-header__link--mobile" href="catalog.html">
+                  Каталог товаров
+                </a>
+              </li>
+              <li class="main-header__item main-header__item--mobile main-header__item--order">
+                <a class="main-header__link main-header__link--mobile" href="form.html">
+                  Вязание на заказ
+                </a>
+              </li>
+              <li class="main-header__item main-header__item--mobile main-header__item--search">
+                <a class="main-header__link main-header__link--mobile" href="#">
+                  Поиск по сайту
+                </a>
+              </li>
+              <li class="main-header__item main-header__item--mobile main-header__item--cart">
+                <a class="main-header__link main-header__link--mobile" href="#">
+                  Корзина: пока пуста
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-header__navigation-container main-header__navigation-container--tablet">
+          <a class="main-header__logo main-header__logo--tablet" href="index.html">
+            <img src="img/logo-tablet.svg" width="113" height="46" alt="Магазин товаров ручной работы «Мишка».">
+          </a>
+          <ul class="main-header__list main-header__list--tablet-main">
+            <li class="main-header__item main-header__item--tablet main-header__item--tablet-search">
+              <a class="main-header__link main-header__link--tablet main-header__link--tablet-search" href="#">
+                <span class="visually-hidden">Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="main-header__item main-header__item--tablet main-header__item--tablet-cart">
+              <a class="main-header__link main-header__link--tablet main-header__link--tablet-cart" href="#">
+                Корзина: пока пуста
+              </a>
+            </li>
+          </ul>
+          <ul class="main-header__list main-header__list--tablet-secondary">
+            <li class="main-header__item main-header__item--tablet">
+              <a class="main-header__link" href="catalog.html">
                 Каталог товаров
               </a>
             </li>
-            <li class="main-header__item main-header__item--mobile main-header__item--order">
-              <a class="main-header__link main-header__link--mobile" href="form.html">
+            <li class="main-header__item main-header__item--tablet">
+              <a class="main-header__link" href="form.html">
                 Вязание на заказ
               </a>
             </li>
-            <li class="main-header__item main-header__item--mobile main-header__item--search">
-              <a class="main-header__link main-header__link--mobile" href="#">
-                Поиск по сайту
+          </ul>
+        </div>
+        <div class="main-header__navigation-container main-header__navigation-container--desktop">
+          <ul class="main-header__list main-header__list--desktop-secondary">
+            <li class="main-header__item main-header__item--desktop main-header__item--desktop-catalog">
+              <a class="main-header__link main-header__link--desktop main-header__link--desktop-catalog"
+                href="catalog.html">
+                Каталог товаров
               </a>
             </li>
-            <li class="main-header__item main-header__item--mobile main-header__item--cart">
-              <a class="main-header__link main-header__link--mobile" href="#">
+            <li class="main-header__item main-header__item--desktop main-header__item--desktop-order">
+              <a class="main-header__link main-header__link--desktop main-header__link--desktop-order" href="form.html">
+                Вязание на заказ
+              </a>
+            </li>
+          </ul>
+          <a class="main-header__logo main-header__logo--desktop" href="index.html">
+            <img src="img/logo-desktop.svg" width="149" height="72" alt="Магазин товаров ручной работы «Мишка».">
+          </a>
+          <ul class="main-header__list main-header__list--desktop-main">
+            <li class="main-header__item main-header__item--desktop main-header__item--desktop-search">
+              <a class="main-header__link main-header__link--desktop main-header__link--desktop-search" href="#">
+                <span class="visually-hidden">Поиск по сайту</span>
+              </a>
+            </li>
+            <li class="main-header__item main-header__item--desktop main-header__item--desktop-cart">
+              <a class="main-header__link main-header__link--desktop main-header__link--desktop-cart" href="#">
                 Корзина: пока пуста
               </a>
             </li>
           </ul>
         </div>
-      </div>
-      <div class="main-header__navigation-container main-header__navigation-container--tablet">
-        <a class="main-header__logo main-header__logo--tablet" href="index.html">
-          <img src="img/logo-tablet.svg" width="113" height="46" alt="Магазин товаров ручной работы «Мишка».">
-        </a>
-        <ul class="main-header__list main-header__list--tablet-main">
-          <li class="main-header__item main-header__item--tablet main-header__item--tablet-search">
-            <a class="main-header__link main-header__link--tablet main-header__link--tablet-search" href="#">
-              <span class="visually-hidden">Поиск по сайту</span>
-            </a>
-          </li>
-          <li class="main-header__item main-header__item--tablet main-header__item--tablet-cart">
-            <a class="main-header__link main-header__link--tablet main-header__link--tablet-cart" href="#">
-              Корзина: пока пуста
-            </a>
-          </li>
-        </ul>
-        <ul class="main-header__list main-header__list--tablet-secondary">
-          <li class="main-header__item main-header__item--tablet">
-            <a class="main-header__link" href="catalog.html">
-              Каталог товаров
-            </a>
-          </li>
-          <li class="main-header__item main-header__item--tablet">
-            <a class="main-header__link" href="form.html">
-              Вязание на заказ
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="main-header__navigation-container main-header__navigation-container--desktop">
-        <ul class="main-header__list main-header__list--desktop-secondary">
-          <li class="main-header__item main-header__item--desktop main-header__item--desktop-catalog">
-            <a class="main-header__link main-header__link--desktop main-header__link--desktop-catalog"
-              href="catalog.html">
-              Каталог товаров
-            </a>
-          </li>
-          <li class="main-header__item main-header__item--desktop main-header__item--desktop-order">
-            <a class="main-header__link main-header__link--desktop main-header__link--desktop-order" href="form.html">
-              Вязание на заказ
-            </a>
-          </li>
-        </ul>
-        <a class="main-header__logo main-header__logo--desktop" href="index.html">
-          <img src="img/logo-desktop.svg" width="149" height="72" alt="Магазин товаров ручной работы «Мишка».">
-        </a>
-        <ul class="main-header__list main-header__list--desktop-main">
-          <li class="main-header__item main-header__item--desktop main-header__item--desktop-search">
-            <a class="main-header__link main-header__link--desktop main-header__link--desktop-search" href="#">
-              <span class="visually-hidden">Поиск по сайту</span>
-            </a>
-          </li>
-          <li class="main-header__item main-header__item--desktop main-header__item--desktop-cart">
-            <a class="main-header__link main-header__link--desktop main-header__link--desktop-cart" href="#">
-              Корзина: пока пуста
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
-  <main class="main-container">
-    <section class="presentation">
-      <div class="presentation__wrapper">
-        <div class="presentation__additional">
-          <ul class="presentation__additional-list">
-            <li class="presentation__additional-item">Новые поступления</li>
-            <li class="presentation__additional-item">Распродажа</li>
-          </ul>
-          <span class="presentation__additional-delivery">Бесплатная доставка по России</span>
-        </div>
-        <h1 class="presentation__title">Милые штуки ручной <br>
-          работы&nbsp;для&nbsp;дома</h1>
-        <div class="presentation__products">
-          <ul class="presentation__list">
-            <li class="presentation__item presentation__item--interior"><a class="presentation__link">
-                Предметы <br>
-                интерьера</a></li>
-            <li class="presentation__item presentation__item--toys"><a class="presentation__link">
-                Детские <br>
-                игрушки</a></li>
-          </ul>
-        </div>
+  <section class="presentation">
+    <div class="presentation__wrapper">
+      <div class="presentation__additional">
+        <ul class="presentation__additional-list">
+          <li class="presentation__additional-item">Новые поступления</li>
+          <li class="presentation__additional-item">Распродажа</li>
+        </ul>
+        <span class="presentation__additional-delivery">Бесплатная доставка по России</span>
       </div>
-    </section>
+      <h1 class="presentation__title">Милые штуки ручной <br>
+        работы&nbsp;для&nbsp;дома</h1>
+      <div class="presentation__products">
+        <ul class="presentation__list">
+          <li class="presentation__item presentation__item--interior"><a class="presentation__link">
+              Предметы <br>
+              интерьера</a></li>
+          <li class="presentation__item presentation__item--toys"><a class="presentation__link">
+              Детские <br>
+              игрушки</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <main class="main-container">
     <section class="featured">
       <div class="featured__wrapper featured-card">
         <h2 class="featured-card__title title">Вязаные корзинки</h2>
         <span class="featured-card__attention">Товар недели</span>
-        <p class="featured-card__text">Экологически чистая пряжа, <br>
-          ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+        <p class="featured-card__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх
+          размерах.</p>
         <dl class="featured-card__parameters">
           <div class="featured-card__item">
             <dt class="featured-card__property">Цвет:</dt>
@@ -148,9 +150,9 @@
             <dd class="featured-card__definition">15 см</dd>
           </div>
         </dl>
-        <img class="featured-card__image" src="img/knitted-basket-mobile.jpg" alt="Вязаная корзинка.">
+        <img class="featured-card__image" src="img/knitted-basket-desktop.jpg" alt="Вязаная корзинка.">
         <p class="featured-card__price">Цена: 990 руб.</p>
-        <a class="featured-card__button button" href="#">Заказать</a>
+        <a class="button featured-card__button button--full-width" href="#">Заказать</a>
       </div>
     </section>
     <section class="about">
@@ -192,7 +194,7 @@
             <span class="visually-hidden">Вперёд.</span>
           </button>
         </div>
-        <a class="slider__button button" href="#">Написать</a>
+        <a class="slider__button button button--full-width" href="#">Написать</a>
       </div>
     </section>
     <section class="contacts">
@@ -211,10 +213,10 @@
           </div>
         </dl>
         <iframe class="contacts__map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d890.2782092919265!2d30.322712350826645!3d59.938664009732314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca18e1d7%3A0xe1b646f62fb95e7a!2sMISHKA!5e0!3m2!1sru!2sru!4v1648835504839!5m2!1sru!2sru"
-          width="320" height="454" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <a class="contacts__button button" href="#">Напишите нам</a>
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d890.2782092919265!2d30.322712350826645!3d59.938664009732314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca18e1d7%3A0xe1b646f62fb95e7a!2sMISHKA!5e0!3m2!1sru!2sru!4v1648835504839!5m2!1sru!2sru"
+        width="320" height="454" style="border: 0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a class="contacts__button button button--full-width" href="#">Напишите нам</a>
       </div>
     </section>
   </main>

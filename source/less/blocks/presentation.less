@@ -46,7 +46,8 @@
 }
 
 .presentation__products {
-  max-width: 100vw;
+  width: 100vw;
+  margin-left: 30px;
 }
 
 .presentation__list {
@@ -78,11 +79,15 @@
 
 @media (min-width: @tablet-width) {
   .presentation {
-    width: 100vw;
     background-image: url("../../img/index-background-tablet.jpg");
     background-size: cover;
     padding-top: 0;
-    margin-left: -50px;
+    margin-left: 0;
+  }
+
+  .presentation__wrapper {
+    max-width: 668px;
+    margin: 0 auto;
   }
 
   .presentation__title {
@@ -106,15 +111,12 @@
     display: block;
     font-size: 15px;
     line-height: 24px;
-    margin-right: 50px;
     padding-top: 14px;
   }
 
   .presentation__list {
     display: grid;
     grid-template-columns: auto auto;
-    margin-left: 50px;
-    margin-right: 50px;
   }
 
   .presentation__item {
@@ -126,20 +128,25 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  .presentation__products {
+    max-width: 668px;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .presentation {
-    width: 100vw;
-  }
-
-  .presentation__wrapper {
+    margin-left: 0;
     background-image: url("../../img/index-background-desktop.jpg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 0;
-    margin-left: -50px;
+  }
+
+  .presentation__wrapper {
+    max-width: 1050px;
   }
 
   .presentation__title {
@@ -152,7 +159,6 @@
   .presentation__additional {
     justify-content: space-between;
     padding-top: 20px;
-    margin-left: 50px;
   }
 
   .presentation__additional-list {
@@ -164,7 +170,6 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    margin-left: 50px;
   }
 
   .presentation__additional-item:not(:last-child) {
@@ -175,11 +180,10 @@
     font-size: 15px;
     line-height: 24px;
     padding-top: 0;
-    margin-right: 50px;
   }
 
-  .presentation__list {
-    margin-left: 100px;
-    margin-right: 0;
+  .presentation__products {
+    max-width: 1050px;
+    margin: 0;
   }
 }

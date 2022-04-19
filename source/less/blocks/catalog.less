@@ -3,6 +3,9 @@
 }
 
 .catalog__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -39,21 +42,21 @@
   margin: 0;
   margin-left: 28px;
   margin-bottom: 41px;
-  position: relative;
 }
 
-.catalog__text::after {
+.catalog__buy::before {
   content: "";
   position: absolute;
   height: 1px;
   width: 204px;
   border-bottom: 1px solid #ececec;
-  top: 50px;
-  right: 42px;
+  top: -10px;
+  right: 30px;
 }
 
 .catalog__buy {
   display: flex;
+  position: relative;
 }
 
 .catalog__price {
@@ -66,4 +69,117 @@
 .catalog__button {
   display: block;
   margin-left: 100px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog {
+    margin-bottom: 53px;
+  }
+
+  .catalog__list {
+    gap: 54px;
+    align-items: center;
+  }
+
+  .catalog__item {
+    width: 100%;
+    display: flex;
+    border-top: 1px solid #ececec;
+    align-self: flex-start;
+  }
+
+  .catalog__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 34px;
+  }
+
+  .catalog__image {
+    width: 334px;
+    height: 334px;
+  }
+
+  .catalog__title,
+  .catalog__text,
+  .catalog__price {
+    margin-left: 0;
+  }
+
+  .catalog__buy::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 268px;
+    border-bottom: 1px solid #ececec;
+    top: -10px;
+    right: 30px;
+  }
+
+  .catalog__title {
+    font-size: 20px;
+  }
+
+  .catalog__text {
+    font-size: 15px;
+  }
+
+  .catalog__price {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__list {
+    display: grid;
+    grid-template-columns: repeat(3, 316px);
+    column-gap: 51px;
+    row-gap: 57px;
+  }
+
+  .catalog__item {
+    min-height: 659px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ececec;
+  }
+
+  .catalog__image {
+    width: 316px;
+    height: 462px;
+  }
+
+  .catalog__info {
+    max-width: 282px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 34px;
+  }
+
+  .catalog__text {
+    margin-bottom: 0;
+  }
+
+  .catalog__buy {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+  }
+
+  .catalog__buy::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 256px;
+    border-bottom: 1px solid #ececec;
+    top: -10px;
+    right: 30px;
+  }
+
+  .catalog__button {
+    display: block;
+  }
 }

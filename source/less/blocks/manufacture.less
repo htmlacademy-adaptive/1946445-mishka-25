@@ -28,3 +28,76 @@
   margin-bottom: 51px;
   margin-left: 34px;
 }
+
+@media (min-width: @tablet-width) {
+  .manufacture {
+    border-top: none;
+  }
+
+  .manufacture__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .manufacture__video {
+    order: 1;
+  }
+
+  .manufacture__title {
+    order: 2;
+    font-size: 20px;
+    margin-left: 117px;
+  }
+
+  .manufacture__text {
+    order: 3;
+    font-size: 15px;
+    line-height: 30px;
+    padding-left: 25px;
+    padding-right: 17px;
+  }
+
+  .manufacture__button {
+    order: 4;
+    width: 584px;
+    align-self: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .manufacture__wrapper {
+    display: grid;
+    column-gap: 79px;
+    row-gap: 0;
+  }
+
+  .manufacture__video {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    margin-bottom: 0;
+    height: 455px;
+  }
+
+  .manufacture__title {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0;
+    padding-top: 96px;
+    padding-right: 110px;
+  }
+
+  .manufacture__text {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .manufacture__button {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    width: 230px;
+    align-self: flex-start;
+    margin: 0;
+  }
+}

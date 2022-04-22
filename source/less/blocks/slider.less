@@ -1,3 +1,17 @@
+.slider {
+  position: relative;
+}
+
+.slider::after {
+  content: "";
+  position: absolute;
+  width: 768px;
+  height: 6px;
+  background-image: url("../img/zigzag-mobile.svg");
+  bottom: -61px;
+  left: -250px;
+}
+
 .slider__toggles {
   display: flex;
   margin-bottom: 38px;
@@ -6,15 +20,43 @@
 .slider__toggle {
   display: block;
   flex-grow: 1;
+  width: 130px;
   height: 52px;
   border: 1px solid #ececec;
   background-color: #ffffff;
   padding: 13px 42px;
+  position: relative;
+  cursor: pointer;
+
+  &:hover::before {
+    opacity: 60%;
+  }
+
+  &:active::before {
+    opacity: 30%;
+  }
+}
+
+.slider__toggle::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 26px;
+  top: 13px;
+  left: 38px;
+  background-image: url("../img/prev-arrow.svg");
+}
+
+.slider__toggle:last-child::before {
+  transform: rotate(180deg);
 }
 
 @media (min-width: @tablet-width) {
-  .slider {
-    position: relative;
+  .slider::after {
+    width: 1150px;
+    height: 17px;
+    background-image: url("../img/zigzag-tablet.svg");
+    bottom: -105px;
   }
 
   .slider__button {
@@ -28,18 +70,30 @@
     position: absolute;
     right: 0;
     bottom: 15px;
-    gap: 37px;
     margin: 0;
   }
 
   .slider__toggle {
     width: 50px;
-    height: 26px;
-    padding: 0;
+    height: 52px;
+    border: none;
+    padding: 13px 42px;
+  }
+
+  .slider__toggle::before {
+    left: 18px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .slider::after {
+    width: 1050px;
+    height: 23px;
+    background-image: url("../img/zigzag-desktop.svg");
+    bottom: -175px;
+    left: -170px;
+  }
+
   .slider__button {
     right: 0;
     top: 0;

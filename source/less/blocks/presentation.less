@@ -59,20 +59,78 @@
 .presentation__item {
   background-color: #63d1bb;
   padding-left: 30px;
+
+  &:hover,
+  &:active {
+    background-color: #59d5bc;
+  }
 }
 
 .presentation__item--toys {
   background-color: #56c3b2;
+
+  &:hover,
+  &:active {
+    background-color: #46c1ae;
+  }
 }
 
 .presentation__link {
   display: block;
+  height: 48px;
   text-decoration: none;
   color: #ffffff;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
   padding: 24px 160px 31px 0;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    height: 58px;
+    padding: 19px 160px 31px 0;
+  }
+}
+
+.presentation__link--interior::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 62px;
+  right: 36px;
+  top: 23px;
+  background-image: url("../img/interior-icon.svg");
+  opacity: 0.5;
+}
+
+.presentation__link--toys::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  right: 27px;
+  top: 21px;
+  background-image: url("../img/toy-icon.svg");
+  opacity: 0.5;
+}
+
+.presentation__item--interior:hover .presentation__link--interior::before {
+  top: 18px;
+  opacity: 70%;
+}
+
+.presentation__item--interior:active .presentation__link--interior::before {
+  opacity: 30%;
+}
+
+.presentation__item--toys:hover .presentation__link--toys::before {
+  top: 16px;
+  opacity: 70%;
+}
+
+.presentation__item--toys:active .presentation__link--toys::before {
+  opacity: 30%;
 }
 
 @media (min-width: @tablet-width) {
@@ -81,6 +139,16 @@
     background-size: cover;
     padding-top: 0;
     margin-left: 0;
+    position: relative;
+  }
+
+  .presentation::after {
+    content: "";
+    position: absolute;
+    width: 1150px;
+    height: 24px;
+    background-image: url("../img/zigzag-presentation-tablet.svg");
+    bottom: -10px;
   }
 
   .presentation--catalog {
@@ -143,9 +211,37 @@
   }
 
   .presentation__link {
+    height: 64px;
     padding: 25px 167px 34px 36px;
     font-size: 20px;
     line-height: 30px;
+
+    &:hover {
+      height: 74px;
+      padding: 20px 167px 34px 36px;
+    }
+  }
+
+  .presentation__link--interior::before {
+    width: 41px;
+    height: 62px;
+    right: 36px;
+    top: 30px;
+  }
+
+  .presentation__item--interior:hover .presentation__link--interior::before {
+    top: 25px;
+  }
+
+  .presentation__link--toys::before {
+    width: 61px;
+    height: 61px;
+    right: 33px;
+    top: 31px;
+  }
+
+  .presentation__item--toys:hover .presentation__link--toys::before {
+    top: 24px;
   }
 
   .presentation__products {
@@ -162,6 +258,13 @@
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 0;
+  }
+
+  .presentation::after {
+    width: 2000px;
+    height: 34px;
+    background-image: url("../img/zigzag-presentation-desktop.svg");
+    bottom: -10px;
   }
 
   .presentation--catalog {
@@ -211,7 +314,22 @@
   }
 
   .presentation__additional-item:not(:last-child) {
-    margin-right: 45px;
+    margin-right: 25px;
+  }
+
+  .presentation__additional-link {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    padding: 20px 20px 20px 0;
+
+    &:hover {
+      opacity: 60%;
+    }
+
+    &:active {
+      opacity: 30%;
+    }
   }
 
   .presentation__additional-delivery {
@@ -223,5 +341,11 @@
   .presentation__products {
     max-width: 1050px;
     margin: 0;
+  }
+
+  .presentation__link--toys::before {
+    width: 60px;
+    height: 61px;
+    right: 35px;
   }
 }

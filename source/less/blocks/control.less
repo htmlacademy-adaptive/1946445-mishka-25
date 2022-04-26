@@ -83,8 +83,57 @@
 
 
 @media (min-width: @tablet-width) {
+  .control {
+    padding-left: 80px;
+  }
+
   .control__label {
     display: block;
     margin-left: 0;
+    font-size: 19px;
+  }
+
+  .control__mark--radio {
+    position: absolute;
+    left: 0;
+    top: -20px;
+    width: 52px;
+    height: 52px;
+    border: 2px solid #444444;
+    border-radius: 50%;
+  }
+
+  .control__input {
+    &:checked + .control__mark--radio::after {
+      width: 23px;
+      height: 23px;
+      top: 15px;
+      left: 15px;
+    }
+  }
+
+  .control__mark--check {
+    left: 0;
+    top: -20px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .control__input--check {
+    &:checked + .control__mark--check::after {
+      width: 2px;
+      height: 18px;
+      top: 21px;
+      left: 14px;
+      transform: rotate(-45deg);
+    }
+
+    &:checked + .control__mark--check::before {
+      width: 2px;
+      height: 31px;
+      top: 9px;
+      left: 31px;
+      transform: rotate(45deg);
+    }
   }
 }

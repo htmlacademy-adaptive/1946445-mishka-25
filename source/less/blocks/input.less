@@ -4,5 +4,22 @@
   font-size: 17px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
   border-bottom: 2px solid #000000;
+
+  &:hover {
+    border-color: #62d1ba;
+  }
+
+  &:active {
+    color: #444444;
+    outline: none;
+  }
+
+  &:focus {
+    color: #444444;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #62d1ba;
+  }
 }

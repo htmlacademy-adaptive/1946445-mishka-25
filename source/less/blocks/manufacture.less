@@ -1,7 +1,21 @@
 .manufacture {
   margin-bottom: 58px;
-  border-bottom: 1px solid #ececec;
-  border-top: 1px solid #ececec;
+}
+
+.manufacture__wrapper {
+  width: 258px;
+  outline: 1px solid #ececec;
+  padding-top: 22px;
+  padding-bottom: 33px;
+  margin-left: 1px;
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:disabled {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .manufacture__title {
@@ -11,10 +25,47 @@
   font-weight: 700;
   margin-left: 91px;
   margin-bottom: 26.5px;
+  position: relative;
+}
+
+.manufacture__title::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 22px;
+  background-image: url("../img/catalog-images/video-icon.svg");
+  left: -57px;
+  top: 14px;
 }
 
 .manufacture__video {
+  width: 259px;
   margin-bottom: 35px;
+  overflow: hidden;
+}
+
+.manufacture__image {
+  position: relative;
+  cursor: pointer;
+
+  &:hover::before {
+    transform: scale(1.2);
+  }
+
+  &:disabled::before {
+    transform: scale(0.8);
+    opacity: 30%;
+  }
+}
+
+.manufacture__image::before {
+  content: "";
+  position: absolute;
+  width: 101px;
+  height: 77px;
+  background-image: url("../img/catalog-images/play-icon.svg");
+  left: 80px;
+  bottom: 40px;
 }
 
 .manufacture__text {
@@ -25,7 +76,6 @@
 }
 
 .manufacture__button {
-  margin-bottom: 51px;
   margin-left: 34px;
 }
 
@@ -35,18 +85,36 @@
   }
 
   .manufacture__wrapper {
+    width: 666px;
     display: flex;
     flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 46px;
   }
 
   .manufacture__video {
     order: 1;
+    width: 667px;
+    margin-bottom: 0;
+  }
+
+  .manufacture__image::before {
+    width: 102px;
+    height: 78px;
+    left: 283px;
+    bottom: 190px;
   }
 
   .manufacture__title {
     order: 2;
     font-size: 20px;
     margin-left: 117px;
+    margin-top: 41px;
+  }
+
+  .manufacture__title::before {
+    left: -57px;
+    top: 0;
   }
 
   .manufacture__text {
@@ -66,15 +134,18 @@
 
 @media (min-width: @desktop-width) {
   .manufacture__wrapper {
+    width: 1048px;
     display: grid;
     column-gap: 79px;
     row-gap: 0;
+    padding-bottom: 0;
   }
 
   .manufacture__video {
     grid-column: 1/2;
     grid-row: 1/4;
     margin-bottom: 0;
+    width: 683px;
     height: 455px;
   }
 
@@ -84,6 +155,11 @@
     margin: 0;
     padding-top: 96px;
     padding-right: 110px;
+  }
+
+  .manufacture__title::before {
+    left: 0;
+    top: 47px;
   }
 
   .manufacture__text {

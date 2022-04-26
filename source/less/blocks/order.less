@@ -26,9 +26,7 @@
   .order__text {
     font-size: 17px;
     line-height: 30px;
-    margin: 0 auto;
-    margin-bottom: 16px;
-    margin-top: 54px;
+    margin: 54px auto 60px auto;
     max-width: 668px;
   }
 
@@ -37,55 +35,40 @@
     grid-template-columns: 100px auto;
     column-gap: 67px;
     width: 668px;
-    margin: 0 auto;
     padding-top: 65px;
   }
 
   .order__container-grey {
     background-color: #f1f1f1;
     width: 100vw;
+    padding-top: 45px;
   }
 
   .order__field--grey {
     width: 668px;
-    margin: 0 auto;
-  }
-
-  .order__field--name {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .order__field--contacts {
-    padding-top: 0;
-  }
-
-  .order__field--add {
-    padding-top: 0;
-    position: relative;
   }
 
   .order__tip {
     font-size: 17px;
     line-height: 30px;
-    position: absolute;
     margin: 0;
-    top: 255px;
-    right: 0;
+    margin-left: auto;
+    margin-top: 10px;
+    order: 4;
   }
 
   .order__button {
     width: 230px;
     height: 52px;
-    position: absolute;
-    top: 245px;
+    margin-right: auto;
+    order: 3;
   }
 }
 
 @media (min-width: @desktop-width) {
   .order__text {
     margin: 0 auto;
-    margin-bottom: 16px;
+    margin-bottom: 80px;
     margin-top: 99px;
     max-width: 702px;
   }
@@ -104,33 +87,17 @@
     margin: 0 auto;
   }
 
-  .order__field--name {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .order__field--contacts {
-    padding-top: 0;
-  }
-
-  .order__field--add {
-    padding-top: 0;
-    position: relative;
-  }
-
   .order__tip {
     font-size: 17px;
     line-height: 30px;
-    position: absolute;
     margin: 0;
-    top: 255px;
-    right: 185px;
+    margin-top: 10px;
+    margin-right: 140px;
   }
 
   .order__button {
     width: 230px;
     height: 52px;
-    position: absolute;
-    top: 245px;
+    margin-left: 174px;
   }
 }

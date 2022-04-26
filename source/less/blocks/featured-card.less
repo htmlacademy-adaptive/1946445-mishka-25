@@ -8,11 +8,14 @@
 .featured-card::after {
   content: "";
   position: absolute;
-  width: 768px;
+  width: 100%;
   height: 6px;
   background-image: url("../img/zigzag-mobile.svg");
-  bottom: -36px;
-  left: -250px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  left: 0;
+  right: 0;
+  bottom: -40px;
 }
 
 .featured-card__title {
@@ -81,7 +84,6 @@
   }
 
   .featured-card::after {
-    width: 1150px;
     height: 17px;
     background-image: url("../img/zigzag-tablet.svg");
     bottom: -52px;
@@ -137,11 +139,9 @@
   }
 
   .featured-card::after {
-    width: 1050px;
     height: 23px;
     background-image: url("../img/zigzag-desktop.svg");
     bottom: -25px;
-    left: 0;
   }
 
   .featured-card__attention {

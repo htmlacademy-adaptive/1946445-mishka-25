@@ -41,7 +41,7 @@
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   }
 
-  &:disabled {
+  &:active {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   }
 }
@@ -55,7 +55,7 @@
     opacity: 60%;
   }
 
-  &:disabled {
+  &:active {
     opacity: 30%;
   }
 }
@@ -109,7 +109,7 @@
     fill: #63d1bb;
   }
 
-  &:disabled .catalog__cart-icon {
+  &:active .catalog__cart-icon {
     opacity: 30%;
   }
 }
@@ -208,9 +208,12 @@
   .catalog__image {
     width: 316px;
     height: 462px;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
+  }
+
+  .catalog__image img {
+    width: 316px;
+    height: 462px;
+    object-fit: cover;
   }
 
   .catalog__info {

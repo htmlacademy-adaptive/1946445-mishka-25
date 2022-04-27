@@ -1,5 +1,7 @@
 .presentation {
+  box-sizing: border-box;
   width: 100vw;
+  height: 506px;
   padding-top: 73px;
   background-image: url("../img/index-background.jpg");
   block-size: contain;
@@ -8,15 +10,18 @@
   background-color: #f9f9f9;
   margin-bottom: 31px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .presentation--catalog {
+  height: 177px;
   background-color: #f1f1f1;
   background-image: none;
   padding-bottom: 73px;
 }
 
 .presentation--form {
+  height: 177px;
   background-color: #f1f1f1;
   background-image: none;
   padding-bottom: 73px;
@@ -46,6 +51,8 @@
 
 .presentation__products {
   width: 100vw;
+  position: absolute;
+  bottom: 0;
 }
 
 .presentation__list {
@@ -59,23 +66,36 @@
 .presentation__item {
   background-color: #63d1bb;
   padding-left: 30px;
+  height: 103px;
+  bottom: 0;
 
   &:hover,
-  &:disabled {
+  &:active {
     background-color: #59d5bc;
+    height: 108px;
   }
+}
+
+.presentation__item--interior {
+  position: absolute;
+  width: 100vw;
+  bottom: 100px;
 }
 
 .presentation__item--toys {
   background-color: #56c3b2;
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
 
   &:hover,
-  &:disabled {
+  &:active {
     background-color: #46c1ae;
   }
 }
 
-.presentation__link {
+.presentation__link--interior,
+.presentation__link--toys {
   display: block;
   height: 48px;
   text-decoration: none;
@@ -86,11 +106,6 @@
   padding: 24px 160px 31px 0;
   position: relative;
   cursor: pointer;
-
-  &:hover {
-    height: 58px;
-    padding: 19px 160px 31px 0;
-  }
 }
 
 .presentation__link--interior::before {
@@ -98,7 +113,7 @@
   position: absolute;
   width: 40px;
   height: 62px;
-  right: 36px;
+  right: 66px;
   top: 23px;
   background-image: url("../img/interior-icon.svg");
   opacity: 0.5;
@@ -109,7 +124,7 @@
   position: absolute;
   width: 60px;
   height: 60px;
-  right: 27px;
+  right: 57px;
   top: 21px;
   background-image: url("../img/toy-icon.svg");
   opacity: 0.5;
@@ -120,7 +135,7 @@
   opacity: 70%;
 }
 
-.presentation__item--interior:disabled .presentation__link--interior::before {
+.presentation__item--interior:active .presentation__link--interior::before {
   opacity: 30%;
 }
 
@@ -129,12 +144,13 @@
   opacity: 70%;
 }
 
-.presentation__item--toys:disabled .presentation__link--toys::before {
+.presentation__item--toys:active .presentation__link--toys::before {
   opacity: 30%;
 }
 
 @media (min-width: @tablet-width) {
   .presentation {
+    height: 746px;
     background-image: url("../img/index-background-tablet.jpg");
     background-size: cover;
     padding-top: 0;
@@ -148,17 +164,19 @@
     width: 100%;
     height: 24px;
     background-image: url("../img/zigzag-presentation-tablet.svg");
-    background-repeat: no-repeat;
+    background-position: center;
     bottom: -10px;
   }
 
   .presentation--catalog {
+    height: 238px;
     background-color: #f1f1f1;
     background-image: none;
     padding-bottom: 10px;
   }
 
   .presentation--form {
+    height: 238px;
     background-color: #f1f1f1;
     background-image: none;
     padding-bottom: 10px;
@@ -179,11 +197,11 @@
   }
 
   .presentation__title--catalog {
-    margin: 101px auto 75px auto;
+    margin: 57px auto 75px auto;
   }
 
   .presentation__title--form {
-    margin: 101px auto 75px auto;
+    margin: 57px auto 75px auto;
   }
 
   .presentation__additional {
@@ -209,6 +227,23 @@
 
   .presentation__item {
     padding: 0;
+    width: 50%;
+    height: 119px;
+    position: absolute;
+
+    &:hover,
+    &:active {
+      height: 124px;
+    }
+  }
+
+  .presentation__item--interior {
+    left: 0;
+    bottom: 0;
+  }
+
+  .presentation__item--toys {
+    right: 0;
   }
 
   .presentation__link {
@@ -253,6 +288,7 @@
 
 @media (min-width: @desktop-width) {
   .presentation {
+    height: 763px;
     background-image: url("../img/index-background-desktop.jpg");
     background-size: unset;
     background-repeat: no-repeat;
@@ -265,12 +301,14 @@
   }
 
   .presentation--catalog {
+    height: 272px;
     background-color: #f1f1f1;
     background-image: none;
     padding-bottom: 10px;
   }
 
   .presentation--form {
+    height: 272px;
     background-color: #f1f1f1;
     background-image: none;
   }
@@ -287,11 +325,11 @@
   }
 
   .presentation__title--catalog {
-    margin: 101px auto 75px auto;
+    margin: 58px auto 75px auto;
   }
 
   .presentation__title--form {
-    margin: 101px auto 75px auto;
+    margin: 58px auto 75px auto;
   }
 
   .presentation__additional {
@@ -324,7 +362,7 @@
       opacity: 60%;
     }
 
-    &:disabled {
+    &:active {
       opacity: 30%;
     }
   }

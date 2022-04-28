@@ -1,3 +1,7 @@
+.slider {
+  position: relative;
+}
+
 .slider__toggles {
   display: flex;
   margin-bottom: 38px;
@@ -6,17 +10,38 @@
 .slider__toggle {
   display: block;
   flex-grow: 1;
+  width: 130px;
   height: 52px;
   border: 1px solid #ececec;
   background-color: #ffffff;
   padding: 13px 42px;
+  position: relative;
+  cursor: pointer;
+
+  &:hover::before {
+    opacity: 60%;
+  }
+
+  &:active::before {
+    opacity: 30%;
+  }
+}
+
+.slider__toggle::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 26px;
+  top: 13px;
+  left: 38px;
+  background-image: url("../img/prev-arrow.svg");
+}
+
+.slider__toggle:last-child::before {
+  transform: rotate(180deg);
 }
 
 @media (min-width: @tablet-width) {
-  .slider {
-    position: relative;
-  }
-
   .slider__button {
     position: absolute;
     width: 175px;
@@ -28,25 +53,34 @@
     position: absolute;
     right: 0;
     bottom: 15px;
-    gap: 37px;
     margin: 0;
   }
 
   .slider__toggle {
     width: 50px;
-    height: 26px;
-    padding: 0;
+    height: 52px;
+    border: none;
+    padding: 13px 42px;
+  }
+
+  .slider__toggle::before {
+    left: 18px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .slider {
+    width: 1050px;
+    margin-left: 0;
+  }
+
   .slider__button {
-    right: 0;
+    right: 50px;
     top: 0;
   }
 
   .slider__toggles {
-    right: 0;
+    right: 50px;
     bottom: 15px;
     margin: 0;
   }

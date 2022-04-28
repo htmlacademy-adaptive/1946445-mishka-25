@@ -1,5 +1,7 @@
 .field {
   border: none;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .field__name {
@@ -9,7 +11,7 @@
   line-height: 16px;
   font-weight: 700;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .field__name:not(:nth-child(n+3))::after {
@@ -38,13 +40,19 @@
 }
 
 .field__list {
+  width: 260px;
   display: flex;
   flex-direction: column;
   list-style-type: none;
+  padding: 0;
 }
 
 .field__item {
   margin-bottom: 24px;
+}
+
+.field__item--checkbox {
+  margin-bottom: 53px;
 }
 
 .field__label {
@@ -58,6 +66,56 @@
   margin-bottom: 22px;
 }
 
+.field__input--phone {
+  width: 220px;
+  padding-right: 40px;
+}
+
+.field__name--phone {
+  &:hover::before {
+    opacity: 100%;
+    filter: none;
+  }
+}
+
+.field__name--phone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 24px;
+  background-image: url("../img/catalog-images/phone-icon.svg");
+  left: 230px;
+  top: 35px;
+  z-index: 2;
+  opacity: 70%;
+  filter: saturate(0%);
+}
+
+.field__input--email {
+  width: 220px;
+  padding-right: 40px;
+}
+
+.field__name--email {
+  &:hover::before {
+    opacity: 100%;
+    filter: none;
+  }
+}
+
+.field__name--email::before {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 21px;
+  background-image: url("../img/catalog-images/mail-icon.svg");
+  left: 230px;
+  top: 35px;
+  z-index: 2;
+  opacity: 70%;
+  filter: saturate(0%);
+}
+
 .field__input--desired {
   border: 2px solid #000000;
   width: 230px;
@@ -65,17 +123,23 @@
   resize: none;
   font-family: "opensans", sans-serif;
   margin-bottom: 17px;
+
+  &:active {
+    color: rgba(0, 0, 0, 1);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .field {
     border: none;
-    position: relative;
+    display: grid;
+    grid-template-columns: 150px auto;
+    column-gap: 20px;
+    padding-top: 0;
+    margin: 0 auto;
   }
 
   .field__name {
-    position: absolute;
-    top: 66px;
     margin-bottom: 0;
     grid-column: 1/2;
   }
@@ -89,11 +153,12 @@
   }
 
   .field__list {
+    width: 498px;
     grid-column: 2/3;
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    margin-top: 0;
+    margin-top: -20px;
   }
 
   .field__item:not(:last-child) {
@@ -103,7 +168,8 @@
   .field__list--checkbox {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    column-gap: 135px;
+    column-gap: 50px;
+    margin-bottom: 0;
   }
 
   .field__item--checkbox {
@@ -111,92 +177,185 @@
   }
 
   .field__label {
-    margin-left: 127px;
+    grid-column: 2/3;
     font-size: 19px;
     position: relative;
     margin-bottom: 59px;
   }
 
-  .field__input {
+  .field--name {
+    padding-top: 85px;
+    position: relative;
+  }
+
+  .field__name--nsp {
     position: absolute;
-    top: -20px;
-    right: 0;
+    top: 67px;
+  }
+
+  .field__list--nsp {
+    margin-bottom: 0;
   }
 
   .field__input--name {
-    width: 428px;
+    width: 399px;
     padding: 16px 8px 18px 18px;
+    position: absolute;
+    left: 73px;
+    top: -20px;
   }
 
   .field__input--surname {
-    width: 375px;
+    width: 349px;
     padding: 17px 8px 17px 16px;
+    position: absolute;
+    left: 125px;
+    top: -20px;
   }
 
   .field__input--patronymic {
-    width: 375px;
+    width: 348px;
     padding: 16px 8px 18px 17px;
+    position: absolute;
+    left: 125px;
+    top: -20px;
+  }
+
+  .field--contacts {
+    width: 668px;
+    position: relative;
+    padding-bottom: 50px;
   }
 
   .field__name--phone,
   .field__name--email {
-    margin-left: 0;
+    margin-left: -170px;
+    max-width: 150px;
+    position: relative;
+    margin-bottom: 62px;
   }
 
   .field__input--phone,
   .field__input--email {
-    width: 501px;
+    width: 467px;
     background-color: #f1f1f1;
-    top: -20px;
-    left: 135px;
+    position: absolute;
   }
 
   .field__input--phone {
     padding: 14px 17px 20px 17px;
+    left: 170px;
+    top: -20px;
+  }
+
+  .field__name--phone::before {
+    left: 620px;
+    top: 0;
   }
 
   .field__input--email {
     padding: 15px 18px 19px 18px;
+    left: 170px;
+    top: -20px;
   }
 
   .field__name--email {
-    margin-bottom: 150px;
+    margin-bottom: 0;
+  }
+
+  .field__name--email::before {
+    left: 620px;
+    top: 0;
+  }
+
+  .field--add {
+    padding-top: 50px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .field__name--add {
     margin-left: 0;
-    margin-bottom: 330px;
+    margin-bottom: 0;
   }
 
   .field__input--desired {
-    top: 50px;
+    box-sizing: border-box;
     width: 501px;
+    height: 142px;
     padding: 17px;
+    margin-left: auto;
+    margin-bottom: 50px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .field__list {
+    width: 880px;
+  }
+
   .field__list--checkbox {
+    width: 880px;
     display: grid;
     grid-template-columns: repeat(3, auto);
-    column-gap: 55px;
+    column-gap: 0;
+  }
+
+  .field--name {
+    column-gap: 30px;
+  }
+
+  .field--contacts {
+    width: 1050px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .field__name--nsp {
+    grid-column: 1/2;
+  }
+
+  .field__list--nsp {
+    grid-column: 2/3;
   }
 
   .field__label {
-    margin-left: 127px;
+    margin-left: 0;
     font-size: 19px;
     position: relative;
     margin-bottom: 59px;
+  }
+
+  .field__name {
+    margin-bottom: 0;
+    margin-left: 46px;
+  }
+
+  .field__name--phone,
+  .field__name--email {
+    margin-left: 46px;
+    max-width: 150px;
+    position: relative;
+    margin-bottom: 62px;
+  }
+
+  .field__name--phone::before {
+    left: 830px;
+  }
+
+  .field__name--email {
+    margin-bottom: 0;
+  }
+
+  .field__name--email::before {
+    left: 830px;
   }
 
   .field__input {
     position: absolute;
     top: -20px;
     left: 130px;
-  }
-
-  .field__name {
-    margin-bottom: 500px;
   }
 
   .field__input--name {
@@ -215,16 +374,6 @@
     padding: 16px 8px 18px 17px;
   }
 
-  .field__name--phone,
-  .field__name--email {
-    margin-left: 0;
-    margin-bottom: 61px;
-  }
-
-  .field__name--email {
-    margin-bottom: 130px;
-  }
-
   .field__input--phone,
   .field__input--email {
     width: 700px;
@@ -234,13 +383,12 @@
   }
 
   .field__name--add {
-    margin-left: 0;
-    margin-bottom: 330px;
+    margin-left: 46px;
   }
 
   .field__input--desired {
-    top: 50px;
-    width: 700px;
-    padding: 17px;
+    width: 738px;
+    position: static;
+    margin-left: 60px;
   }
 }

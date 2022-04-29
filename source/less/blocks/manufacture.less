@@ -1,16 +1,17 @@
 .manufacture {
+  width: 260px;
+  padding: 0 30px;
+  margin: 0 auto;
   margin-bottom: 58px;
 }
 
 .manufacture__wrapper {
-  width: 258px;
-  outline: 1px solid #ececec;
   padding-top: 22px;
   padding-bottom: 33px;
-  margin-left: 1px;
+  outline: 1px solid #ececec;
 
   &:hover {
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   &:active {
@@ -23,6 +24,7 @@
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
+  margin-top: 0;
   margin-left: 91px;
   margin-bottom: 26.5px;
   position: relative;
@@ -81,11 +83,13 @@
 
 @media (min-width: @tablet-width) {
   .manufacture {
-    border-top: none;
+    width: 668px;
+    padding: 0 50px;
+    margin: 0 auto;
+    margin-bottom: 58px;
   }
 
   .manufacture__wrapper {
-    width: 666px;
     display: flex;
     flex-direction: column;
     padding-top: 0;
@@ -133,8 +137,14 @@
 }
 
 @media (min-width: @desktop-width) {
+  .manufacture {
+    width: 1050px;
+    padding: 0 50px;
+    margin: 0 auto;
+    margin-bottom: 58px;
+  }
+
   .manufacture__wrapper {
-    width: 1048px;
     display: grid;
     column-gap: 79px;
     row-gap: 0;

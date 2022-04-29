@@ -143,15 +143,23 @@
     margin: 0 auto;
     position: relative;
     background-image: url("../img/knitted-basket-desktop.jpg");
-    background-size: 525px 636px;
+    background-size: 520px 636px;
     background-position: 580px 65px;
     background-repeat: no-repeat;
   }
 
   .featured-card::after {
+    display: none;
+  }
+
+  .featured-card__wrapper::after {
+    content: "";
+    position: absolute;
+    width: 1050px;
     height: 23px;
     background-image: url("../img/zigzag-desktop.svg");
-    bottom: -300px;
+    bottom: -50px;
+    left: 50px;
   }
 
   .featured-card__attention {

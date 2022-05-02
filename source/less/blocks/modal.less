@@ -1,0 +1,143 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 3;
+
+  &:target {
+    display: flex;
+  }
+}
+
+.modal__area {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modal--opened {
+  display: flex;
+}
+
+.modal__container {
+  box-sizing: border-box;
+  width: 320px;
+  height: 336px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  margin: auto;
+  padding: 28px 0 46px 0;
+  background-color: #ffffff;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  text-align: center;
+}
+
+.modal__title {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0 30px;
+  margin: 0 auto 14px auto;
+}
+
+.modal__text {
+  font-size: 15px;
+  line-height: 30px;
+  padding: 0 30px;
+  margin: 0 auto 22px auto;
+}
+
+.modal__list {
+  list-style-type: none;
+  margin: 0 30px 31px 30px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__variant {
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  background-color: #ffffff;
+  width: 82px;
+  height: 52px;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid rgba(68, 68, 68, 0.3);
+  }
+
+  &:active {
+    border: 2px solid #62d1ba;
+  }
+}
+
+.modal__variant--chosen {
+  border: 2px solid #63d1bb;
+}
+
+.modal__button {
+  width: 260px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #63d1bb;
+  border: none;
+  padding: 18px 67px;
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .modal__container {
+    width: 566px;
+    height: 336px;
+    padding: 38px 93px 46px 93px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 57px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 11px;
+  }
+
+  .modal__text {
+    font-size: 17px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .modal__list {
+    justify-content: flex-start;
+    gap: 7px;
+    margin: 0 0 31px 15px;
+  }
+
+  .modal__variant {
+    width: 112px;
+    height: 52px;
+  }
+
+  .modal__button {
+    width: 350px;
+    padding: 18px 67px;
+    margin: 0;
+  }
+}

@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Магазин товаров ручной работы «Мишка»</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -150,7 +154,7 @@
     </div>
   </section>
   <main>
-    <section class="featured-card">
+    <section class="featured-card" id="featured">
       <div class="featured-card__wrapper">
         <h2 class="featured-card__title title">Вязаные корзинки</h2>
         <span class="featured-card__attention">Товар недели</span>
@@ -170,9 +174,9 @@
             <dd class="featured-card__definition">15 см</dd>
           </div>
         </dl>
-        <img class="featured-card__image" src="img/knitted-basket-desktop.jpg" alt="Вязаная корзинка.">
+        <img class="featured-card__image" src="img/knitted-basket-mobile.jpg" srcset="img/knitted-basket-mobile@2x.jpg 2x" alt="Вязаная корзинка.">
         <p class="featured-card__price">Цена: 990 руб.</p>
-        <a class="button featured-card__button button--full-width" href="#">Заказать</a>
+        <a class="button featured-card__button button--full-width" href="#modal" id="myBtn">Заказать</a>
       </div>
     </section>
     <section class="about">
@@ -289,6 +293,22 @@
       </div>
     </div>
   </footer>
+    <!-- Модальное окно -->
+    <div class="modal modal--closed" id="modal">
+      <a class="modal__area" href="#featured"></a>
+      <div class="modal__container">
+          <section>
+            <p class="modal__title">Добавить в корзину</p>
+            <p class="modal__text">Выберите размер:</p>
+            <ul class="modal__list">
+              <li class="modal__item"><button class="modal__variant modal__variant--chosen" type="button">S</button></li>
+              <li class="modal__item"><button class="modal__variant" type="button">M</button></li>
+              <li class="modal__item"><button class="modal__variant" type="button">L</button></li>
+            </ul>
+            <button class="modal__button" type="submit">Добавить</button>
+          </section>
+        </div>
+      </div>
   <script src="script.js"></script>
 </body>
 

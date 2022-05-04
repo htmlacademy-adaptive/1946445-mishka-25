@@ -856,6 +856,9 @@
     background-image: none;
   }
 }
+.featured-card {
+  position: relative;
+}
 .featured-card__wrapper {
   width: 260px;
   padding: 0 30px;
@@ -874,7 +877,7 @@
   background-repeat: repeat-x;
   left: 0;
   right: 0;
-  bottom: -70px;
+  bottom: -50px;
 }
 .featured-card__title {
   margin: 0;
@@ -1422,6 +1425,7 @@
 }
 .contacts {
   margin-bottom: 39px;
+  position: relative;
 }
 .contacts__wrapper {
   width: 260px;
@@ -1432,7 +1436,7 @@
   margin-bottom: 28px;
 }
 .contacts__address {
-  margin-bottom: 30px;
+  margin-bottom: 540px;
 }
 .contacts__item {
   display: grid;
@@ -1469,13 +1473,14 @@
   top: 26px;
 }
 .contacts__map {
-  width: 320px;
-  margin: 0 0 42px -30px;
+  width: 100%;
+  position: absolute;
+  top: 290px;
+  left: 0;
 }
 @media (min-width: 768px) {
   .contacts {
     margin-bottom: 57px;
-    position: relative;
   }
   .contacts__wrapper {
     width: 668px;
@@ -1506,8 +1511,8 @@
     width: 204px;
   }
   .contacts__map {
-    width: 768px;
-    margin: 0 0 55px -50px;
+    top: 240px;
+    left: 0;
   }
   .contacts__button {
     width: 230px;
@@ -1516,13 +1521,12 @@
 }
 @media (min-width: 1150px) {
   .contacts {
-    margin-bottom: 105px;
+    width: 1050px;
+    margin: 0 auto 105px auto;
   }
   .contacts__wrapper {
     width: 875px;
-    padding: 0 50px 0 225px;
-    margin: 0 auto;
-    position: relative;
+    padding: 0 50px 0 175px;
   }
   .contacts__title::after {
     left: -111px;
@@ -1539,10 +1543,11 @@
   }
   .contacts__map {
     position: absolute;
-    top: -35px;
-    right: 50px;
     width: 527px;
     height: 457px;
+    top: -30px;
+    right: 0;
+    margin-left: auto;
   }
   .contacts__button {
     margin: 0;

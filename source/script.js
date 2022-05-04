@@ -12,15 +12,3 @@ navToggle.addEventListener('click', function () {
     navMain.classList.remove('main-header__navigation-mobile--opened');
   }
 });
-
-
-let modal = document.getElementById('modal');
-let btn = document.getElementById("myBtn");
-
-btn.onclick = function() {
-  modal.classList.add('modal--opened');
-}
-
-window.onclick = function() {
-  modal.classList.remove('modal--opened');
-}

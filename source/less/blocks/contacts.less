@@ -1,5 +1,6 @@
 .contacts {
   margin-bottom: 39px;
+  position: relative;
 }
 
 .contacts__wrapper {
@@ -13,7 +14,7 @@
 }
 
 .contacts__address {
-  margin-bottom: 30px;
+  margin-bottom: 540px;
 }
 
 .contacts__item {
@@ -58,14 +59,15 @@
 }
 
 .contacts__map {
-  width: 320px;
-  margin: 0 0 42px -30px;
+  width: 100%;
+  position: absolute;
+  top: 290px;
+  left: 0;
 }
 
 @media (min-width: @tablet-width) {
   .contacts {
     margin-bottom: 57px;
-    position: relative;
   }
 
   .contacts__wrapper {
@@ -103,8 +105,8 @@
   }
 
   .contacts__map {
-    width: 768px;
-    margin: 0 0 55px -50px;
+    top: 240px;
+    left: 0;
   }
 
   .contacts__button {
@@ -115,14 +117,13 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    margin-bottom: 105px;
+    width: 1050px;
+    margin: 0 auto 105px auto;
   }
 
   .contacts__wrapper {
     width: 875px;
-    padding: 0 50px 0 225px;
-    margin: 0 auto;
-    position: relative;
+    padding: 0 50px 0 175px;
   }
 
   .contacts__title::after {
@@ -143,10 +144,11 @@
 
   .contacts__map {
     position: absolute;
-    top: -35px;
-    right: 50px;
     width: 527px;
     height: 457px;
+    top: -30px;
+    right: 0;
+    margin-left: auto;
   }
 
   .contacts__button {

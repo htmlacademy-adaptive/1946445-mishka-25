@@ -1,10 +1,6 @@
-.catalog {
-  margin-bottom: 30px;
-}
-
 .catalog__wrapper {
   width: 260px;
-  padding: 0 30px;
+  padding: 30px 30px 0 30px;
   margin: 0 auto;
 }
 
@@ -17,8 +13,8 @@
   margin: 0;
 }
 
-.catalog__item:not(:last-child) {
-  margin-bottom: 30px;
+.catalog__item {
+  margin-bottom: 31px;
 }
 
 .catalog__link {
@@ -34,12 +30,10 @@
 }
 
 .catalog__info {
-  padding-top: 29px;
+  padding: 28px 28px 10px 28px;
   outline: 1px solid #ececec;
   width: 202px;
   margin-left: 1px;
-  padding-left: 28px;
-  padding-right: 28px;
 
   &:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
@@ -76,7 +70,7 @@
   font-size: 13px;
   line-height: 30px;
   margin: 0;
-  margin-bottom: 41px;
+  margin-bottom: 26px;
 }
 
 .catalog__buy::before {
@@ -130,24 +124,24 @@
 
 @media (min-width: @tablet-width) {
   .catalog {
-    margin-bottom: 53px;
+    margin-bottom: 23px;
   }
 
   .catalog__wrapper {
     width: 668px;
-    padding: 0 50px;
+    padding: 67px 50px 0 50px;
     margin: 0 auto;
   }
 
   .catalog__list {
-    gap: 54px;
+    gap: 25px;
     align-items: center;
   }
 
   .catalog__item {
     width: 100%;
     display: flex;
-    align-self: flex-start;
+    margin-bottom: 30px;
   }
 
   .catalog__link {
@@ -157,13 +151,15 @@
 
   .catalog__info {
     width: 335px;
-    height: 303px;
     margin-top: 1px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 34px;
-    padding-right: 34px;
+    padding: 27px 34px 2px 32px;
+  }
+
+  .catalog__buy {
+    margin-bottom: 5px;
   }
 
   .catalog__buy::before {
@@ -190,9 +186,13 @@
 }
 
 @media (min-width: @desktop-width) {
+  .catalog {
+    margin-bottom: 58px;
+  }
+
   .catalog__wrapper {
     width: 1050px;
-    padding: 0 50px;
+    padding: 111px 50px 0 50px;
     margin: 0 auto;
   }
 
@@ -218,16 +218,13 @@
 
   .catalog__info {
     width: 258px;
+    min-height: 167px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-left: 28px;
     padding-right: 28px;
-  }
-
-  .catalog__description {
-    height: 100%;
   }
 
   .catalog__text {

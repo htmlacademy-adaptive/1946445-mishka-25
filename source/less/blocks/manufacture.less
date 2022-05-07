@@ -6,7 +6,7 @@
 }
 
 .manufacture__wrapper {
-  padding-top: 22px;
+  padding-top: 23px;
   padding-bottom: 33px;
   outline: 1px solid #ececec;
 
@@ -44,23 +44,20 @@
   width: 259px;
   margin-bottom: 35px;
   overflow: hidden;
-}
-
-.manufacture__image {
   position: relative;
   cursor: pointer;
 
-  &:hover::before {
+  &:hover::after {
     transform: scale(1.2);
   }
 
-  &:active::before {
+  &:active::after {
     transform: scale(0.8);
     opacity: 30%;
   }
 }
 
-.manufacture__image::before {
+.manufacture__video::after {
   content: "";
   position: absolute;
   width: 101px;
@@ -74,7 +71,8 @@
   font-size: 13px;
   line-height: 24px;
   margin-left: 34px;
-  margin-bottom: 41px;
+  margin-bottom: 40px;
+  margin-top: -6px;
 }
 
 .manufacture__button {
@@ -86,14 +84,14 @@
     width: 666px;
     padding: 0 50px;
     margin: 0 auto;
-    margin-bottom: 58px;
+    margin-bottom: 64px;
   }
 
   .manufacture__wrapper {
     display: flex;
     flex-direction: column;
     padding-top: 0;
-    padding-bottom: 46px;
+    padding-bottom: 42px;
   }
 
   .manufacture__video {
@@ -102,23 +100,23 @@
     margin-bottom: 0;
   }
 
-  .manufacture__image::before {
+  .manufacture__video::after {
     width: 102px;
     height: 78px;
-    left: 283px;
-    bottom: 190px;
+    left: 282px;
+    bottom: 194px;
   }
 
   .manufacture__title {
     order: 2;
     font-size: 20px;
-    margin-left: 97px;
-    margin-top: 41px;
+    margin-left: 106px;
+    margin-top: 36px;
   }
 
   .manufacture__title::before {
-    left: -57px;
-    top: 0;
+    left: -65px;
+    top: -2px;
   }
 
   .manufacture__text {
@@ -128,6 +126,7 @@
     padding-left: 25px;
     padding-right: 17px;
     margin-left: 15px;
+    margin-top: -4px;
     align-self: center;
   }
 
@@ -136,6 +135,7 @@
     width: 584px;
     align-self: center;
     margin-left: 0;
+    font-size: 17px;
   }
 }
 
@@ -144,7 +144,7 @@
     width: 1048px;
     padding: 0 50px;
     margin: 0 auto;
-    margin-bottom: 58px;
+    margin-bottom: 103px;
   }
 
   .manufacture__wrapper {
@@ -160,6 +160,11 @@
     margin-bottom: 0;
     width: 683px;
     height: 455px;
+  }
+
+  .manufacture__video::after {
+    left: 290px;
+    bottom: 190px;
   }
 
   .manufacture__title {
@@ -180,6 +185,8 @@
     grid-row: 2/3;
     padding-left: 0;
     margin: 0;
+    margin-top: -62px;
+    margin-bottom: 20px;
   }
 
   .manufacture__button {

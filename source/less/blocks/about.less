@@ -1,15 +1,11 @@
-.about {
-  margin-bottom: 58px;
-}
-
 .about__wrapper {
   width: 260px;
-  padding: 0 30px;
+  padding: 12px 30px 0 30px;
   margin: 0 auto;
 }
 
 .about__title {
-  margin-bottom: 82px;
+  margin-bottom: 83px;
 }
 
 .about__list {
@@ -91,7 +87,7 @@
 @media (min-width: @tablet-width) {
   .about__wrapper {
     width: 668px;
-    padding: 0 50px;
+    padding: 22px 50px 0 50px;
     margin: 0 auto;
   }
 
@@ -102,9 +98,10 @@
   .about__list {
     display: grid;
     grid-template-columns: repeat(2, minmax(235px, 325px));
-    column-gap: 60px;
-    row-gap: 110px;
+    column-gap: 10px;
+    row-gap: 111px;
     font-size: 20px;
+    line-height: 22px;
   }
 
   .about__item--style {
@@ -120,16 +117,50 @@
   .about__item:not(:last-child) {
     margin-bottom: 0;
   }
+
+  .about__item--material::before {
+    bottom: 63px;
+    left: 8px;
+  }
+
+  .about__item--style::before {
+    bottom: 72px;
+    left: 1px;
+  }
+
+  .about__item--like::before {
+    bottom: 67px;
+    left: 8px;
+  }
+
+  .about__item--handmade::before {
+    bottom: 64px;
+    left: 1px;
+  }
+
+  .about__item--support::before {
+    bottom: 73px;
+    left: -7px;
+  }
+
+  .about__item--wrap::before {
+    bottom: 66px;
+    left: 2px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .about__wrapper {
     width: 700px;
-    padding: 0 225px 0 225px;
+    padding: 23px 225px 0 225px;
     margin: 0 auto;
   }
 
   .about__title {
     margin-bottom: 95px;
+  }
+
+  .about__list {
+    column-gap: 25px;
   }
 }

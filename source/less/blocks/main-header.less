@@ -4,6 +4,8 @@
   position: relative;
   background-color: #ffffff;
   color: #000000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 .main-header__wrapper {
@@ -51,7 +53,7 @@
   display: block;
   width: 86px;
   margin: 0 auto;
-  margin-bottom: 22px;
+  margin-bottom: 15px;
 
   &:hover {
     opacity: 60%;
@@ -253,8 +255,8 @@
 
 @media (min-width: @tablet-width) {
   .main-header__navigation {
-    padding-top: 0;
-    padding-bottom: 10px;
+    padding-top: 11px;
+    padding-bottom: 12px;
   }
 
   .main-header__navigation-mobile {
@@ -267,6 +269,7 @@
   }
 
   .main-header {
+    box-sizing: border-box;
     padding: 0;
   }
 
@@ -287,12 +290,15 @@
 
   .main-header__list--tablet-main {
     margin-left: auto;
+    margin-top: 3px;
   }
 
   .main-header__list--tablet-secondary {
     max-width: 360px;
     position: absolute;
-    top: 90px;
+    top: 108px;
+    display: flex;
+    gap: 7px;
     z-index: 1;
   }
 
@@ -315,7 +321,7 @@
     width: 18px;
     height: 18px;
     position: relative;
-    padding: 36px 31px 34px 33px;
+    padding: 37px 31px 34px 33px;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
 
     &:hover {
@@ -345,13 +351,13 @@
     position: absolute;
     width: 18px;
     height: 18px;
-    left: 31px;
+    left: 33px;
     top: 35px;
   }
 
   .main-header__link--tablet-cart {
     position: relative;
-    padding: 32.5px 0 30px 73px;
+    padding: 32.5px 0 30px 83px;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
 
     &:hover {
@@ -424,6 +430,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    padding-top: 2px;
   }
 
   .main-header__logo--desktop {
@@ -436,6 +443,7 @@
     padding: 0;
     padding-top: 20px;
     font-size: 17px;
+    margin-right: 6px;
   }
 
   .main-header__item--desktop-catalog {
@@ -444,7 +452,7 @@
   }
 
   .main-header__link--desktop-catalog {
-    padding: 32.5px 30px 33.5px 0;
+    padding: 32.5px 34px 33.5px 0;
   }
 
   .main-header__link--desktop-order {
@@ -453,18 +461,19 @@
 
   .main-header__item--desktop-order {
     padding-top: 30px;
+    margin-right: 60px;
   }
 
   .main-header__item--desktop-search {
     padding-top: 30px;
     padding-right: 18px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .main-header__item--desktop-cart {
     font-size: 17px;
-    padding: 0;
-    padding-top: 30px;
-    padding-right: 0;
+    padding: 30px 0 0 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .main-header__search-icon {
@@ -478,8 +487,7 @@
 
   .main-header__link--desktop-search {
     position: relative;
-    padding: 36px 31px 34px 33px;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 36px 31px 34px 30px;
 
     &:hover {
       opacity: 100%;
@@ -514,8 +522,7 @@
 
   .main-header__link--desktop-cart {
     position: relative;
-    padding: 32.5px 0 34px 73px;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 32.5px 0 34px 78px;
 
     &:hover {
       opacity: 100%;

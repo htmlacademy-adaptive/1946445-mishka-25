@@ -1,11 +1,14 @@
 .main-footer {
   width: 100vw;
   background-color: #f1f1f1;
-  padding: 25px 0 22px 0;
+  padding: 27px 0 22px 0;
   position: relative;
 }
 
 .main-footer__wrapper {
+  width: 260px;
+  padding: 0 30px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -19,14 +22,19 @@
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
-  margin-bottom: 60px;
+  margin-top: 0;
+  margin-left: 60px;
+  margin-bottom: 44px;
   padding: 0;
 }
 
 .main-footer__item {
-  margin-right: 31px;
+  margin-right: 36px;
   margin-bottom: 20px;
+}
+
+.main-footer__item:first-child {
+  margin-right: 31px;
 }
 
 .main-footer__link {
@@ -46,7 +54,7 @@
 .main-footer__copyright {
   display: flex;
   position: relative;
-  margin: 0 auto;
+  margin-left: 13px;
 }
 
 .main-footer::before {
@@ -55,28 +63,30 @@
   height: 1px;
   width: 100vw;
   border-bottom: 1px solid #e5e5e5;
-  bottom: 90px;
+  bottom: 77px;
 }
 
 .main-footer__copyright-text {
-  display: block;
   padding: 0;
   font-size: 19px;
   line-height: 18px;
   font-weight: 700;
   margin: 0;
-  margin-left: 29px;
+  margin-right: 28px;
 }
 
 .html-logo {
   fill: #63d1bb;
+  margin-top: -7px;
 }
 
 .main-footer__copyright-link {
-  display: block;
+  display: flex;
   margin-left: 27px;
   margin-top: -8px;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 
   &:hover .html-logo {
     fill: #46c1ae;
@@ -90,20 +100,22 @@
 @media (min-width: @tablet-width) {
   .main-footer {
     width: 100vw;
+    padding: 0;
   }
 
   .main-footer__wrapper {
-    max-width: 668px;
+    width: 668px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 51px 0 58px 0;
+    padding: 52px 50px 58px 50px;
   }
 
   .main-footer__logo {
     display: block;
+    margin-right: 27px;
 
     &:hover svg {
       fill: #46c1ae;
@@ -116,6 +128,7 @@
 
   .main-footer__list {
     margin: 0;
+    margin-top: 8px;
   }
 
   .main-footer::before {
@@ -124,6 +137,7 @@
 
   .main-footer__copyright {
     margin: 0;
+    margin-top: 14px;
   }
 }
 
@@ -133,6 +147,6 @@
   }
 
   .main-footer__wrapper {
-    max-width: 1050px;
+    width: 1050px;
   }
 }

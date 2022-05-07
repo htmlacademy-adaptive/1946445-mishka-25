@@ -54,7 +54,7 @@
 }
 
 .field__name--nsp {
-  margin-bottom: 29px;
+  margin-bottom: 27px;
 }
 
 .field__list--nsp {
@@ -98,30 +98,70 @@
 
 .field__input--name {
   width: 252px;
-  padding: 13px 8px 11px 0;
+  padding: 17px 10px 15px 0;
+  margin-top: -2px;
 }
 
 .field__input--surname {
   width: 252px;
-  padding: 14px 8px 11px 0;
+  padding: 17px 10px 15px 0;
+  margin-top: -1px;
 }
 
 .field__input--patronymic {
   width: 252px;
-  padding: 14px 8px 10px 0;
+  padding: 17px 10px 14px 0;
+  margin-top: -1px;
 }
 
+.field__name--email::before {
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 21px;
+  background-image: url("../img/catalog-images/mail-icon.svg");
+  left: 226px;
+  top: 40px;
+  z-index: 2;
+  opacity: 70%;
+  filter: saturate(0%);
+}
+
+.field__name--add {
+  display: block;
+  margin-bottom: 23px;
+}
+
+.field__input--desired {
+  box-sizing: border-box;
+  border: 2px solid #000000;
+  width: 260px;
+  padding: 15px;
+  resize: none;
+  font-family: "opensans", sans-serif;
+  margin-bottom: 0;
+
+  &:active,
+  &:focus-within {
+    color: rgba(0, 0, 0, 1);
+    border: 2px solid #62d1ba;
+  }
+}
 /* stylelint-disable */
+.field__input--phone::-webkit-outer-spin-button,
+.field__input--phone::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
 .field__input--phone {
   width: 220px;
-  padding: 13px 40px 13px 0;
+  padding: 13px 40px 17px 0;
   margin-top: -1px;
   margin-bottom: 31px;
-  -moz-appearance: number-input;
-  -moz-appearance: textfield;
 }
 
-/* stylelint-enable */
+
 .field__name--phone {
   &:hover::before {
     opacity: 100%;
@@ -144,7 +184,7 @@
 
 .field__input--email {
   width: 220px;
-  padding: 14px 40px 14px 0;
+  padding: 17px 40px 16px 0;
 }
 
 .field__name--email {
@@ -154,43 +194,50 @@
   }
 }
 
-.field__name--email::before {
-  position: absolute;
-  content: "";
-  width: 32px;
-  height: 21px;
-  background-image: url("../img/catalog-images/mail-icon.svg");
-  left: 226px;
-  top: 40px;
-  z-index: 2;
-  opacity: 70%;
-  filter: saturate(0%);
-}
-
-.field__name--add {
-  display: block;
-  margin-bottom: 21px;
-}
-
-.field__input--desired {
-  box-sizing: border-box;
-  border: 2px solid #000000;
-  width: 260px;
-  padding: 15px;
-  resize: none;
-  font-family: "opensans", sans-serif;
-  margin-bottom: 4px;
-
-  &:active,
-  &:focus-within {
-    color: rgba(0, 0, 0, 1);
-    border: 2px solid #62d1ba;
+@-moz-document url-prefix() {
+  .field__input--name {
+    width: 252px;
+    padding: 13px 8px 13px 0;
   }
 
-  .field__input--phone::-webkit-outer-spin-button,
-  .field__input--phone::-webkit-inner-spin-button {
-    appearance: none;
-    margin: 0;
+/* stylelint-enable */
+  .field__input--surname {
+    width: 252px;
+    padding: 14px 8px 12px 0;
+  }
+
+  .field__input--patronymic {
+    width: 252px;
+    padding: 14px 8px 12px 0;
+  }
+
+  .field__name--nsp {
+    margin-bottom: 20px;
+  }
+/* stylelint-disable */
+  .field__input--phone {
+    padding: 13px 40px 13px 0;
+    -moz-appearance: number-input;
+    -moz-appearance: textfield;
+  }
+
+/* stylelint-enable */
+  .field__input--email {
+    width: 220px;
+    padding: 14px 40px 14px 0;
+  }
+
+  .field__name--add {
+    display: block;
+    margin-bottom: 21px;
+  }
+
+  .field__input--desired {
+    margin-bottom: 4px;
+  }
+
+  .field__item--nsp:first-child {
+    margin-top: 10px;
   }
 }
 
@@ -367,8 +414,15 @@
     margin-left: auto;
     margin-bottom: 51px;
   }
+/* stylelint-disable */
+  @-moz-document url-prefix() {
+    .field__list--nsp {
+      margin-top: -25px;
+    }
+  }
 }
 
+/* stylelint-enable */
 @media (min-width: @desktop-width) {
   .field {
     padding-left: 23px;
@@ -502,4 +556,12 @@
     margin-left: 60px;
     margin-bottom: 49px;
   }
+
+/* stylelint-disable */
+  @-moz-document url-prefix() {
+    .field__list--nsp {
+      margin-top: -25px;
+    }
+  }
+  /* stylelint-enable */
 }

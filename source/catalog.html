@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Магазин товаров ручной работы «Мишка»</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
   <link rel="icon" href="img/favicons/favicon.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
@@ -146,6 +146,9 @@
           <li class="catalog__item">
             <a class="catalog__link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width:1150px)" srcset="img/catalog-images/catalog-item-hare-desktop.webp 1x, img/catalog-images/catalog-item-hare-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/catalog-images/catalog-item-hare-tablet.webp 1x, img/catalog-images/catalog-item-hare-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog-images/catalog-item-hare.webp 1x, img/catalog-images/catalog-item-hare@2x.webp 2x">
                 <source media="(min-width:1150px)" srcset="img/catalog-images/catalog-item-hare-desktop.jpg 1x, img/catalog-images/catalog-item-hare-desktop@2x.jpg 2x">
                 <source media="(min-width:768px)" srcset="img/catalog-images/catalog-item-hare-tablet.jpg 1x, img/catalog-images/catalog-item-hare-tablet@2x.jpg 2x">
                 <img class="catalog__image" src="img/catalog-images/catalog-item-hare.jpg" srcset="img/catalog-images/catalog-item-hare@2x.jpg 2x" alt="Вязаный зайчик.">
@@ -172,6 +175,9 @@
           <li class="catalog__item">
             <a class="catalog__link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width:1150px)" srcset="img/catalog-images/catalog-item-bag-desktop.webp 1x, img/catalog-images/catalog-item-bag-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/catalog-images/catalog-item-bag-tablet.webp 1x, img/catalog-images/catalog-item-bag-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog-images/catalog-item-bag.webp 1x, img/catalog-images/catalog-item-bag@2x.webp 2x">
                 <source media="(min-width:1150px)" srcset="img/catalog-images/catalog-item-bag-desktop.jpg 1x, img/catalog-images/catalog-item-bag-desktop@2x.jpg 2x">
                 <source media="(min-width:768px)" srcset="img/catalog-images/catalog-item-bag-tablet.jpg 1x, img/catalog-images/catalog-item-bag-tablet@2x.jpg 2x">
                 <img class="catalog__image" src="img/catalog-images/catalog-item-bag.jpg" srcset="img/catalog-images/catalog-item-bag@2x.jpg 2x" alt="Вязаная корзинка.">
@@ -198,6 +204,9 @@
           <li class="catalog__item">
             <a class="catalog__link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width:1150px)" srcset="img/catalog-images/catalog-item-toybag-desktop.webp 1x, img/catalog-images/catalog-item-toybag-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/catalog-images/catalog-item-toybag-tablet.webp 1x, img/catalog-images/catalog-item-toybag-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog-images/catalog-item-toybag.webp 1x, img/catalog-images/catalog-item-toybag@2x.webp 2x">
                 <source media="(min-width:1150px)" srcset="img/catalog-images/catalog-item-toybag-desktop.jpg 1x, img/catalog-images/catalog-item-toybag-desktop@2x.jpg 2x">
                 <source media="(min-width:768px)" srcset="img/catalog-images/catalog-item-toybag-tablet.jpg 1x, img/catalog-images/catalog-item-toybag-tablet@2x.jpg 2x">
                 <img class="catalog__image" src="img/catalog-images/catalog-item-toybag.jpg" srcset="img/catalog-images/catalog-item-toybag@2x.jpg 2x" alt="Большая вязаная корзинка">
@@ -229,6 +238,9 @@
         <h2 class="manufacture__title">Процесс производства</h2>
         <div class="manufacture__video">
           <picture>
+            <source type="image/webp" media="(min-width:1150px)" srcset="img/catalog-images/video-image-desktop.webp 1x, img/catalog-images/video-image-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width:768px)" srcset="img/catalog-images/video-image-tablet.webp 1x, img/catalog-images/video-image-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/catalog-images/video-image-mobile.webp 1x, img/catalog-images/video-image-mobile@2x.webp 2x">
             <source media="(min-width:1150px)" srcset="img/catalog-images/video-image-desktop.jpg 1x, img/catalog-images/video-image-desktop@2x.jpg 2x">
             <source media="(min-width:768px)" srcset="img/catalog-images/video-image-tablet.jpg 1x, img/catalog-images/video-image-tablet@2x.jpg 2x">
             <img class="manufacture__image" src="img/catalog-images/video-image-mobile.jpg" srcset="img/catalog-images/video-image-mobile@2x.jpg 2x" alt="Производство нашей продукции.">
@@ -299,7 +311,7 @@
           </section>
         </div>
       </div>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

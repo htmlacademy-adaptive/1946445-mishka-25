@@ -260,7 +260,6 @@
   .main-header__wrapper {
     position: relative;
     max-width: 668px;
-    margin: 0 auto;
   }
 
   .main-header__list--tablet-main,
@@ -275,13 +274,13 @@
   .main-header__list--tablet-main {
     margin-left: auto;
     margin-top: 3px;
+    max-width: 350px;
   }
 
   .main-header__list--tablet-secondary {
     max-width: 360px;
     position: absolute;
     top: 108px;
-    display: flex;
     gap: 7px;
     z-index: 1;
   }
@@ -289,7 +288,16 @@
   .main-header__item--tablet {
     padding: 0;
     font-size: 15px;
+    margin-top: 50px;
+    padding-left: 10px;
+    padding-right: 5px;
+  }
+
+  .main-header__item--tablet-secondary {
+    padding-left: 0;
     padding-right: 30px;
+    margin-top: 0;
+    margin-bottom: 43px;
   }
 
   .main-header__search-icon {
@@ -369,12 +377,15 @@
   .main-header__item--tablet-search {
     padding-top: 18px;
     padding-right: 18px;
+    padding-left: 0;
+    margin-top: 0;
   }
 
   .main-header__item--tablet-cart {
     font-size: 17px;
     padding: 0;
-    padding-top: 20px;
+    padding-top: 19px;
+    margin-top: 0;
   }
 
   .main-header__logo--tablet {
@@ -389,9 +400,7 @@
   }
 
   .main-header__wrapper {
-    position: relative;
     max-width: 1050px;
-    margin: 0 auto;
   }
 
   .main-header__navigation {
@@ -404,13 +413,12 @@
   }
 
   .main-header__navigation-desktop {
-    display: flex;
-    justify-content: space-between;
+    display: block;
   }
 
-  .main-header__list--desktop-main,
-  .main-header__list--desktop-secondary {
+  .main-header__list--desktop {
     display: flex;
+    flex-wrap: wrap;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -419,20 +427,22 @@
 
   .main-header__logo--desktop {
     margin: 0;
-    margin-right: 150px;
-    padding-top: 10px;
+    margin-right: 161px;
+    padding-top: 8px;
   }
 
   .main-header__item--desktop {
     padding: 0;
     padding-top: 20px;
+    padding-right: 28px;
     font-size: 17px;
-    margin-right: 6px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .main-header__item--desktop-catalog {
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 30px;
+    padding-right: 0;
+    margin-right: 6px;
   }
 
   .main-header__link--desktop-catalog {
@@ -445,19 +455,24 @@
 
   .main-header__item--desktop-order {
     padding-top: 30px;
-    margin-right: 60px;
+    margin-right: 76px;
+    border-right: none;
+    padding-right: 0;
   }
 
   .main-header__item--desktop-search {
     padding-top: 30px;
-    padding-right: 18px;
+    padding-right: 14px;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: none;
+    margin-right: 12px;
   }
 
   .main-header__item--desktop-cart {
     font-size: 17px;
     padding: 30px 0 0 0;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: none;
   }
 
   .main-header__search-icon {
@@ -500,7 +515,7 @@
     position: absolute;
     width: 18px;
     height: 18px;
-    left: 31px;
+    left: 26px;
     top: 35px;
   }
 

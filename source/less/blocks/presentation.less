@@ -1,7 +1,6 @@
 .presentation {
   box-sizing: border-box;
   width: 100vw;
-  height: 507px;
   padding-top: 68px;
   background-image: url("../img/index-background.jpg");
   background-repeat: no-repeat;
@@ -12,19 +11,21 @@
   z-index: 0;
 }
 
+.presentation--index {
+  min-height: 507px;
+}
+
 .presentation--catalog {
-  height: 177px;
   background-color: #f1f1f1;
   background-image: none;
-  padding-bottom: 73px;
+  padding-bottom: 74px;
   margin-top: 0;
 }
 
 .presentation--form {
-  height: 177px;
   background-color: #f1f1f1;
   background-image: none;
-  padding-bottom: 73px;
+  padding-bottom: 74px;
   margin-top: 0;
 }
 
@@ -167,7 +168,6 @@
 
 @media (min-width: @tablet-width) {
   .presentation {
-    height: 760px;
     background-image: url("../img/index-background-tablet.jpg");
     background-size: contain;
     padding-top: 0;
@@ -185,18 +185,20 @@
     bottom: 0;
   }
 
+  .presentation--index {
+    min-height: 760px;
+  }
+
   .presentation--catalog {
-    height: 238px;
     background-color: #f1f1f1;
     background-image: none;
     padding-bottom: 10px;
   }
 
   .presentation--form {
-    height: 238px;
     background-color: #f1f1f1;
     background-image: none;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     margin-bottom: 0;
   }
 
@@ -319,7 +321,6 @@
 
 @media (min-width: @desktop-width) {
   .presentation {
-    height: 763px;
     background-image: url("../img/index-background-desktop.jpg");
   }
 
@@ -329,17 +330,18 @@
     bottom: 0;
   }
 
+  .presentation--index {
+    min-height: 763px;
+  }
+
   .presentation--catalog {
-    height: 272px;
-    background-color: #f1f1f1;
     background-image: none;
-    padding-bottom: 10px;
+    padding-bottom: 114px;
   }
 
   .presentation--form {
-    height: 272px;
-    background-color: #f1f1f1;
     background-image: none;
+    padding-bottom: 36px;
   }
 
   .presentation__wrapper {
@@ -354,7 +356,7 @@
   }
 
   .presentation__title--catalog {
-    margin: 58px auto 75px auto;
+    margin: 56px auto 0 auto;
   }
 
   .presentation__title--form {

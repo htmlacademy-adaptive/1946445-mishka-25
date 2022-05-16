@@ -61,6 +61,7 @@
 
 .contacts__container {
   width: 100%;
+  height: 454px;
   background-image: url("../img/map-mobile.png");
   background-position: center;
   position: absolute;
@@ -73,10 +74,10 @@
   position: absolute;
   width: 67px;
   height: 100px;
-  top: 100px;
+  top: 145px;
+  left: 43%;
   background-image: url("../img/map-pin.svg");
   background-position: center;
-  z-index: 4;
 }
 
 .contacts__map {
@@ -125,9 +126,25 @@
     top: 28px;
   }
 
-  .contacts__map {
+  .contacts__container {
+    width: 100%;
+    height: 454px;
+    background-image: url("../img/map-mobile.png");
+    background-position: center;
+    position: absolute;
     top: 305px;
     left: 0;
+  }
+
+  .contacts__container::after {
+    content: "";
+    position: absolute;
+    width: 67px;
+    height: 100px;
+    top: 145px;
+    left: 43%;
+    background-image: url("../img/map-pin.svg");
+    background-position: center;
   }
 
   .contacts__button {
@@ -174,13 +191,30 @@
     top: 31px;
   }
 
-  .contacts__map {
-    position: absolute;
+  .contacts__container {
     width: 527px;
     height: 457px;
+    background-image: url("../img/map-mobile.png");
+    background-position: center;
     top: 56px;
     right: 0;
     margin-left: auto;
+  }
+
+  .contacts__container::after {
+    content: "";
+    position: absolute;
+    width: 67px;
+    height: 100px;
+    top: 145px;
+    left: 43%;
+    background-image: url("../img/map-pin.svg");
+    background-position: center;
+  }
+
+  .contacts__map {
+    width: 527px;
+    height: 457px;
   }
 
   .contacts__button {

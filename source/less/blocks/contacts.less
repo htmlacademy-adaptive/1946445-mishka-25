@@ -62,9 +62,21 @@
 .contacts__container {
   width: 100%;
   background-image: url("../img/map-mobile.png");
-  // position: absolute;
-  // top: 305px;
-  // left: 0;
+  background-position: center;
+  position: absolute;
+  top: 305px;
+  left: 0;
+}
+
+.contacts__container::after {
+  content: "";
+  position: absolute;
+  width: 67px;
+  height: 100px;
+  top: 100px;
+  background-image: url("../img/map-pin.svg");
+  background-position: center;
+  z-index: 4;
 }
 
 .contacts__map {

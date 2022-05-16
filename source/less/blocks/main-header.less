@@ -36,9 +36,10 @@
   display: none;
 }
 
-.main-header__navigation-mobile .main-header__list-container {
+.main-header__list-container {
   position: static;
   margin: 0 auto;
+  display: none;
 }
 
 .main-header__logo {
@@ -66,6 +67,7 @@
   border: none;
   padding: 0;
   background-color: #ffffff;
+  display: none;
 }
 
 .main-header__list {
@@ -87,6 +89,14 @@
   grid-template-columns: 280px;
   justify-content: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main-header__item--mobile:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main-header__item--mobile:last-child {
+  border-bottom: none;
 }
 
 .main-header__link {
@@ -189,6 +199,10 @@
   z-index: 2;
 }
 
+.main-header__navigation-mobile--opened .main-header__toggle {
+  display: block;
+}
+
 .main-header__navigation-mobile--opened .main-header__toggle::before {
   content: "";
   position: absolute;
@@ -199,8 +213,20 @@
   background-image: url("../img/menu-close-icon.svg");
 }
 
+.main-header__navigation-mobile--opened .main-header__item--mobile:first-child {
+  border-top: none;
+}
+
+.main-header__navigation-mobile--opened .main-header__item--mobile:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .main-header__navigation-mobile--closed .main-header__list-container {
   display: none;
+}
+
+.main-header__navigation-mobile--closed .main-header__toggle {
+  display: block;
 }
 
 .main-header__navigation-mobile--closed .main-header__toggle::before {
@@ -211,10 +237,6 @@
   right: 0;
   top: 0;
   background-image: url("../img/menu-open-icon.svg");
-}
-
-.main-header__navigation-mobile--nojs .main-header__toggle {
-  display: none;
 }
 
 .main-header__navigation-mobile--nojs {
@@ -228,14 +250,11 @@
 .main-header__navigation-mobile--nojs .main-header__list-container {
   position: static;
   margin: 0 auto;
+  display: block;
 }
 
-.main-header__navigation-mobile--nojs .main-header__item--mobile:first-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.main-header__navigation-mobile--nojs .main-header__item--mobile:last-child {
-  border-bottom: none;
+.main-header__navigation-mobile--nojs .main-header__toggle {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
